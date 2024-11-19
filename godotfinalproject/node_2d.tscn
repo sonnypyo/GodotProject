@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://bdruiiqew63be"]
 
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_0m6x6"]
@@ -34,3 +35,8 @@ shape = SubResource("RectangleShape2D_cjoh7")
 position = Vector2(218, 79)
 texture = ExtResource("1_0m6x6")
 >>>>>>> Stashed changes
+=======
+[gd_scene format=3 uid="uid://cmivvv53f0r8g"]
+
+[node name="Node2D" type="Node2D"]
+>>>>>>> parent of eef028d (SJP_11/19 추가)
