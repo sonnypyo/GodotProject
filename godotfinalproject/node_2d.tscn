@@ -3,7 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_0m6x6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbvr"]
+<<<<<<< HEAD
 size = Vector2(50, 43)
+=======
+size = Vector2(111, 110)
+>>>>>>> parent of 11546b8 (SJP_11/19 Player Change)
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,5 +18,9 @@ position = Vector2(1, 3)
 texture = ExtResource("1_0m6x6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+<<<<<<< HEAD
 position = Vector2(-31, -31.5)
+=======
+position = Vector2(-0.5, 2)
+>>>>>>> parent of 11546b8 (SJP_11/19 Player Change)
 shape = SubResource("RectangleShape2D_dwbvr")
