@@ -4,6 +4,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbvr"]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+size = Vector2(732.5, 661)
+>>>>>>> parent of 8c5a143 (KMS_11/19test2)
 size = Vector2(50, 43)
 =======
 size = Vector2(111, 110)
@@ -19,6 +23,10 @@ texture = ExtResource("1_0m6x6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+position = Vector2(304.75, 267.5)
+>>>>>>> parent of 8c5a143 (KMS_11/19test2)
 position = Vector2(-31, -31.5)
 =======
 position = Vector2(-0.5, 2)
