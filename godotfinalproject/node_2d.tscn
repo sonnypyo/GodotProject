@@ -1,3 +1,26 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://bdruiiqew63be"]
 
 [node name="Node2D" type="Node2D"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://bdruiiqew63be"]
+
+[ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_0m6x6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbvr"]
+size = Vector2(732.5, 661)
+size = Vector2(50, 43)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1, 3)
+texture = ExtResource("1_0m6x6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(304.75, 267.5)
+position = Vector2(-31, -31.5)
+shape = SubResource("RectangleShape2D_dwbvr")
+>>>>>>> parent of 8c5a143 (KMS_11/19test2)
