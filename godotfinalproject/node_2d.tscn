@@ -8,6 +8,7 @@
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(73, 81)
 texture = ExtResource("1_0m6x6")
+<<<<<<< Updated upstream
 =======
 [gd_scene load_steps=3 format=3 uid="uid://cmivvv53f0r8g"]
 
@@ -27,3 +28,9 @@ texture = ExtResource("1_68oy4")
 position = Vector2(-4, 0)
 shape = SubResource("RectangleShape2D_cjoh7")
 >>>>>>> eef028daca8e7864700765ad9636c08a7743998c
+=======
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(218, 79)
+texture = ExtResource("1_0m6x6")
+>>>>>>> Stashed changes
