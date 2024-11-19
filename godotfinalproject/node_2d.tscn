@@ -1,5 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8lorr1aqp6jv"]
 
+[ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_6xatn"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfv81"]
+size = Vector2(73, 87)
 
 [node name="Node2D" type="Node2D"]
 
