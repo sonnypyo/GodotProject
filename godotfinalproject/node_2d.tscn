@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://bdruiiqew63be"]
 
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_0m6x6"]
@@ -7,3 +8,22 @@
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(73, 81)
 texture = ExtResource("1_0m6x6")
+=======
+[gd_scene load_steps=3 format=3 uid="uid://cmivvv53f0r8g"]
+
+[ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_68oy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjoh7"]
+size = Vector2(90, 94)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_68oy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_cjoh7")
+>>>>>>> eef028daca8e7864700765ad9636c08a7743998c
