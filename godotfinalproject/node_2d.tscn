@@ -24,6 +24,7 @@ size = Vector2(90, 94)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_68oy4")
+texture = ExtResource("1_6xatn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-4, 0)
@@ -37,6 +38,12 @@ texture = ExtResource("1_0m6x6")
 >>>>>>> Stashed changes
 =======
 [gd_scene format=3 uid="uid://cmivvv53f0r8g"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Sprite2D"]
+position = Vector2(338, -1)
+texture = ExtResource("1_6xatn")
 
 [node name="Node2D" type="Node2D"]
 >>>>>>> parent of eef028d (SJP_11/19 추가)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1.5, -5.5)
+shape = SubResource("RectangleShape2D_nfv81")
