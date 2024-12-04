@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d1skkaa2un0sl"]
 
-[ext_resource type="PackedScene" path="res://square.tscn" id="1_jio5e"]
+[ext_resource type="PackedScene" uid="uid://devu8a8lpb2co" path="res://square.tscn" id="1_jio5e"]
 
 [node name="ranks" type="VBoxContainer"]
 anchors_preset = 15
@@ -8,6 +8,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.72469
 
 [node name="rank8" type="HBoxContainer" parent="."]
 layout_mode = 2
