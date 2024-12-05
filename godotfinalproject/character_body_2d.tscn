@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd0a3i52oyuvp"]
+
+[ext_resource type="Texture2D" uid="uid://dx1cibhxw7gfc" path="res://LightChessPlayer.png" id="1_5bgny"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_xptth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hc4nl"]
+size = Vector2(696, 1000)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_xptth")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(25, 3)
+shape = SubResource("RectangleShape2D_hc4nl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5bgny")
