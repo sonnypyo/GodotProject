@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr1vu17ib4qum"]
+
+[ext_resource type="Texture2D" uid="uid://dc7cpl0mv445f" path="res://CMP backGround.jpeg" id="1_fgfrr"]
+[ext_resource type="PackedScene" uid="uid://fwwf14h8eq1u" path="res://Scenes/Chess8x8.tscn" id="2_qtksi"]
+[ext_resource type="PackedScene" uid="uid://cta5l11s6qypb" path="res://Scenes/character_body_2d.tscn" id="3_1m20a"]
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="4_xwche"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(988, 1789)
+scale = Vector2(5.39184, 5.39184)
+texture = ExtResource("1_fgfrr")
+
+[node name="Chess8x8" parent="." instance=ExtResource("2_qtksi")]
+offset_right = 412.0
+offset_bottom = 412.0
+scale = Vector2(4, 4)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_1m20a")]
+position = Vector2(916, 1477)
+scale = Vector2(0.337562, 0.337562)
+script = ExtResource("4_xwche")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(915, 826)
+zoom = Vector2(0.3, 0.3)

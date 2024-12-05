@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bybghy56rh0ea"]
 
-[ext_resource type="PackedScene" uid="uid://devu8a8lpb2co" path="res://square.tscn" id="1_s0se6"]
+[ext_resource type="PackedScene" uid="uid://devu8a8lpb2co" path="res://Scenes/square.tscn" id="1_s0se6"]
 
 [node name="Chess8x8" type="VBoxContainer"]
 anchors_preset = 15
