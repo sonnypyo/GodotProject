@@ -6,8 +6,8 @@
 
 [node name="Level1" type="Node2D"]
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(988, 1789)
+[node name="BackGround" type="Sprite2D" parent="."]
+position = Vector2(917, 1731)
 scale = Vector2(5.39184, 5.39184)
 texture = ExtResource("1_xuxxv")
 
