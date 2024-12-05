@@ -2,13 +2,54 @@
 
 [ext_resource type="PackedScene" uid="uid://devu8a8lpb2co" path="res://square.tscn" id="1_jio5e"]
 
-[node name="ranks" type="VBoxContainer"]
+[node name="Chess9x9" type="VBoxContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -652.0
+offset_bottom = -148.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = 0.72469
+scale = Vector2(2, 2)
+
+[node name="rank9" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="a7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
+
+[node name="b7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
+[node name="c7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
+
+[node name="d7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
+[node name="e7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
+
+[node name="f7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
+[node name="g7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
+
+[node name="h7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
+[node name="i7" parent="rank9" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
 
 [node name="rank8" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -45,6 +86,10 @@ color = Color(1, 1, 1, 1)
 layout_mode = 2
 dark = true
 
+[node name="g9" parent="rank8" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
 [node name="rank7" type="HBoxContainer" parent="."]
 layout_mode = 2
 
@@ -79,6 +124,10 @@ dark = true
 [node name="h7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
 color = Color(1, 1, 1, 1)
+
+[node name="i7" parent="rank7" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
 
 [node name="rank6" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -115,6 +164,10 @@ color = Color(1, 1, 1, 1)
 layout_mode = 2
 dark = true
 
+[node name="i6" parent="rank6" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
 [node name="rank5" type="HBoxContainer" parent="."]
 layout_mode = 2
 
@@ -149,6 +202,10 @@ dark = true
 [node name="h5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
 color = Color(1, 1, 1, 1)
+
+[node name="g6" parent="rank5" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
 
 [node name="rank4" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -185,6 +242,10 @@ color = Color(1, 1, 1, 1)
 layout_mode = 2
 dark = true
 
+[node name="i4" parent="rank4" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
 [node name="rank3" type="HBoxContainer" parent="."]
 layout_mode = 2
 
@@ -219,6 +280,10 @@ dark = true
 [node name="h3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
 color = Color(1, 1, 1, 1)
+
+[node name="i4" parent="rank3" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
 
 [node name="rank2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -255,6 +320,10 @@ color = Color(1, 1, 1, 1)
 layout_mode = 2
 dark = true
 
+[node name="i2" parent="rank2" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+color = Color(1, 1, 1, 1)
+
 [node name="rank1" type="HBoxContainer" parent="."]
 layout_mode = 2
 
@@ -289,3 +358,7 @@ dark = true
 [node name="h1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
 color = Color(1, 1, 1, 1)
+
+[node name="i1" parent="rank1" instance=ExtResource("1_jio5e")]
+layout_mode = 2
+dark = true
