@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8lorr1aqp6jv"]
+[gd_scene load_steps=3 format=3 uid="uid://blu1wf3avxql8"]
 
-[ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_jb4i7"]
+[ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://icon.svg" id="1_6xatn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfv81"]
 size = Vector2(73, 87)
@@ -10,15 +10,15 @@ size = Vector2(73, 87)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_jb4i7")
+texture = ExtResource("1_6xatn")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Sprite2D"]
 position = Vector2(159, 175)
-texture = ExtResource("1_jb4i7")
+texture = ExtResource("1_6xatn")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Sprite2D/Sprite2D"]
 position = Vector2(195, -1)
-texture = ExtResource("1_jb4i7")
+texture = ExtResource("1_6xatn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1.5, -5.5)

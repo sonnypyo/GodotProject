@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2dblnblybwlm"]
-
-[ext_resource type="Script" path="res://Square.gd" id="1_46iyn"]
-
-[node name="Square" type="ColorRect"]
-custom_minimum_size = Vector2(48, 48)
-color = Color(0, 0, 0, 1)
-script = ExtResource("1_46iyn")
