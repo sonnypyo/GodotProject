@@ -1,7 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqthljpeyoowt"]
 
 [ext_resource type="PackedScene" uid="uid://d2dblnblybwlm" path="res://Scenes/square.tscn" id="1_jio5e"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://Scripts/Square.gd" id="2_e77s1"]
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="Chess9x9" type="VBoxContainer"]
 anchors_preset = 15
@@ -18,8 +21,11 @@ layout_mode = 2
 
 [node name="a7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="b7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -28,8 +34,11 @@ script = ExtResource("2_e77s1")
 
 [node name="c7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="d7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -38,8 +47,11 @@ script = ExtResource("2_e77s1")
 
 [node name="e7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="f7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -48,8 +60,11 @@ script = ExtResource("2_e77s1")
 
 [node name="g7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="h7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -58,8 +73,11 @@ script = ExtResource("2_e77s1")
 
 [node name="i7" parent="rank9" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="rank8" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -71,8 +89,11 @@ script = ExtResource("2_e77s1")
 
 [node name="b8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="c8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -81,8 +102,11 @@ script = ExtResource("2_e77s1")
 
 [node name="d8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="e8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -91,8 +115,11 @@ script = ExtResource("2_e77s1")
 
 [node name="f8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="g8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -101,8 +128,11 @@ script = ExtResource("2_e77s1")
 
 [node name="h8" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="g9" parent="rank8" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -114,8 +144,11 @@ layout_mode = 2
 
 [node name="a7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="b7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -124,8 +157,11 @@ script = ExtResource("2_e77s1")
 
 [node name="c7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="d7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -134,8 +170,11 @@ script = ExtResource("2_e77s1")
 
 [node name="e7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="f7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -144,8 +183,11 @@ script = ExtResource("2_e77s1")
 
 [node name="g7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="h7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -154,8 +196,11 @@ script = ExtResource("2_e77s1")
 
 [node name="i7" parent="rank7" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="rank6" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -167,8 +212,11 @@ script = ExtResource("2_e77s1")
 
 [node name="b6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="c6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -177,8 +225,11 @@ script = ExtResource("2_e77s1")
 
 [node name="d6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="e6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -187,8 +238,11 @@ script = ExtResource("2_e77s1")
 
 [node name="f6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="g6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -197,8 +251,11 @@ script = ExtResource("2_e77s1")
 
 [node name="h6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="i6" parent="rank6" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -210,8 +267,11 @@ layout_mode = 2
 
 [node name="a5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="b5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -220,8 +280,11 @@ script = ExtResource("2_e77s1")
 
 [node name="c5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="d5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -230,8 +293,11 @@ script = ExtResource("2_e77s1")
 
 [node name="e5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="f5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -240,8 +306,11 @@ script = ExtResource("2_e77s1")
 
 [node name="g5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="h5" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -250,8 +319,11 @@ script = ExtResource("2_e77s1")
 
 [node name="g6" parent="rank5" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="rank4" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -263,8 +335,11 @@ script = ExtResource("2_e77s1")
 
 [node name="b4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="c4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -273,8 +348,11 @@ script = ExtResource("2_e77s1")
 
 [node name="d4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="e4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -283,8 +361,11 @@ script = ExtResource("2_e77s1")
 
 [node name="f4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="g4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -293,8 +374,11 @@ script = ExtResource("2_e77s1")
 
 [node name="h4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="i4" parent="rank4" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -306,8 +390,11 @@ layout_mode = 2
 
 [node name="a3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="b3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -316,8 +403,11 @@ script = ExtResource("2_e77s1")
 
 [node name="c3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="d3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -326,8 +416,11 @@ script = ExtResource("2_e77s1")
 
 [node name="e3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="f3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -336,8 +429,11 @@ script = ExtResource("2_e77s1")
 
 [node name="g3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="h3" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -346,8 +442,11 @@ script = ExtResource("2_e77s1")
 
 [node name="i4" parent="rank3" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="rank2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -359,8 +458,11 @@ script = ExtResource("2_e77s1")
 
 [node name="b2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="c2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -369,8 +471,11 @@ script = ExtResource("2_e77s1")
 
 [node name="d2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="e2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -379,8 +484,11 @@ script = ExtResource("2_e77s1")
 
 [node name="f2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="g2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -389,8 +497,11 @@ script = ExtResource("2_e77s1")
 
 [node name="h2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="i2" parent="rank2" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -402,8 +513,11 @@ layout_mode = 2
 
 [node name="a1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="b1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -412,8 +526,11 @@ script = ExtResource("2_e77s1")
 
 [node name="c1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="d1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -422,8 +539,11 @@ script = ExtResource("2_e77s1")
 
 [node name="e1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="f1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -432,8 +552,11 @@ script = ExtResource("2_e77s1")
 
 [node name="g1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
 
 [node name="h1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
@@ -442,5 +565,8 @@ script = ExtResource("2_e77s1")
 
 [node name="i1" parent="rank1" instance=ExtResource("1_jio5e")]
 layout_mode = 2
+<<<<<<< HEAD
 script = ExtResource("2_e77s1")
 dark = true
+=======
+>>>>>>> 59128262da07eb85b188b5eebe6a9368c88f4c1c
