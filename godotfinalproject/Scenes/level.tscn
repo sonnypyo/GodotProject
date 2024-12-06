@@ -1,20 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://dq3ventwbxelb"]
 
-[ext_resource type="Texture2D" uid="uid://dc7cpl0mv445f" path="res://CMP backGround.jpeg" id="1_fgfrr"]
 [ext_resource type="PackedScene" uid="uid://bf7u5ip62xykb" path="res://Scenes/Chess8x8.tscn" id="2_qtksi"]
 [ext_resource type="PackedScene" uid="uid://bd0a3i52oyuvp" path="res://Scenes/character_body_2d.tscn" id="3_1m20a"]
+[ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://dsf.jpg" id="4_o2hln"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="4_xwche"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(988, 1789)
-scale = Vector2(5.39184, 5.39184)
-texture = ExtResource("1_fgfrr")
-
 [node name="Chess8x8" parent="." instance=ExtResource("2_qtksi")]
-offset_right = 412.0
-offset_bottom = 412.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = -240.0
+offset_right = 540.0
+offset_bottom = 300.0
+grow_horizontal = 1
+grow_vertical = 1
 scale = Vector2(4, 4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_1m20a")]
@@ -23,5 +24,19 @@ scale = Vector2(0.337562, 0.337562)
 script = ExtResource("4_xwche")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(915, 826)
+position = Vector2(1084, 841)
 zoom = Vector2(0.3, 0.3)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_top = -239.0
+offset_right = 40.0
+offset_bottom = -199.0
+scale = Vector2(53.9522, 53.9522)
+color = Color(1, 1, 0, 0.870588)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(1088, 838.467)
+scale = Vector2(5.20652, 9.5882)
+texture = ExtResource("4_o2hln")
