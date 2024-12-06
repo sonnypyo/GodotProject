@@ -18,7 +18,7 @@ offset_bottom = 412.0
 scale = Vector2(4, 4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_1m20a")]
-position = Vector2(916, 1477)
+position = Vector2(736, 1466)
 scale = Vector2(0.337562, 0.337562)
 script = ExtResource("4_xwche")
 
