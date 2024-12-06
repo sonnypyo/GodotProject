@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd0a3i52oyuvp"]
 
-[ext_resource type="Texture2D" uid="uid://dx1cibhxw7gfc" path="res://LightChessPlayer.png" id="1_5bgny"]
+[ext_resource type="Texture2D" uid="uid://dx1cibhxw7gfc" path="res://Images/LightChessPlayer.png" id="1_5bgny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hc4nl"]
 size = Vector2(696, 1000)

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dvtkkb6evuqa"
-path="res://.godot/imported/RubikGlitch-Regular.ttf-5455f44eb52aa37442ac990f59b3fb24.fontdata"
+path="res://.godot/imported/RubikGlitch-Regular.ttf-50a66726c5573a1c8d3e5faf012d938d.fontdata"
 
 [deps]
 
-source_file="res://RubikGlitch-Regular.ttf"
-dest_files=["res://.godot/imported/RubikGlitch-Regular.ttf-5455f44eb52aa37442ac990f59b3fb24.fontdata"]
+source_file="res://Images/RubikGlitch-Regular.ttf"
+dest_files=["res://.godot/imported/RubikGlitch-Regular.ttf-50a66726c5573a1c8d3e5faf012d938d.fontdata"]
 
 [params]
 

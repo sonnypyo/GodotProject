@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfovic1d1lsa"
-path="res://.godot/imported/dsf.jpg-184bf11c24217314ff59eb90022bbe7a.ctex"
+uid="uid://dx1cibhxw7gfc"
+path="res://.godot/imported/LightChessPlayer.png-675cb77ec4d17aca278fcaab02679c28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dsf.jpg"
-dest_files=["res://.godot/imported/dsf.jpg-184bf11c24217314ff59eb90022bbe7a.ctex"]
+source_file="res://Images/LightChessPlayer.png"
+dest_files=["res://.godot/imported/LightChessPlayer.png-675cb77ec4d17aca278fcaab02679c28.ctex"]
 
 [params]
 

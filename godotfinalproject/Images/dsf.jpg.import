@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc7cpl0mv445f"
-path="res://.godot/imported/CMP backGround.jpeg-82068eb4a630caf7d4c1455fa7ac978a.ctex"
+uid="uid://dfovic1d1lsa"
+path="res://.godot/imported/dsf.jpg-ac4851ad37bd38d07e5f151738b3dcb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CMP backGround.jpeg"
-dest_files=["res://.godot/imported/CMP backGround.jpeg-82068eb4a630caf7d4c1455fa7ac978a.ctex"]
+source_file="res://Images/dsf.jpg"
+dest_files=["res://.godot/imported/dsf.jpg-ac4851ad37bd38d07e5f151738b3dcb1.ctex"]
 
 [params]
 
