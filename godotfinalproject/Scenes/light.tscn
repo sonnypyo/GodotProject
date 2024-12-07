@@ -1,20 +1,19 @@
 [gd_scene load_steps=5 format=3 uid="uid://1ss7pkyrl6ah"]
 
-[ext_resource type="Script" path="res://Scenes/rigid_body_2d.gd" id="1_13lsq"]
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://Images/icon.svg" id="1_ixggj"]
+[ext_resource type="Script" path="res://Scenes/Light.gd" id="1_o8irg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8ej2"]
 radius = 6.08276
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbg0r"]
-size = Vector2(72, 64)
+[sub_resource type="Curve2D" id="Curve2D_q06ss"]
 
 [node name="Light" type="Node2D"]
 
 [node name="Light_RigidBody2D" type="RigidBody2D" parent="."]
 mass = 0.001
 gravity_scale = 0.0
-script = ExtResource("1_13lsq")
+script = ExtResource("1_o8irg")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Light_RigidBody2D"]
 
@@ -30,18 +29,7 @@ texture = ExtResource("1_ixggj")
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_ixggj")
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(68, 46)
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_q06ss")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Node2D"]
-mass = 1000.0
-gravity_scale = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/RigidBody2D"]
-position = Vector2(69, 31)
-shape = SubResource("RectangleShape2D_kbg0r")
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/RigidBody2D"]
-position = Vector2(70, 31)
-scale = Vector2(0.5625, 0.5)
-texture = ExtResource("1_ixggj")
+[connection signal="body_shape_entered" from="Light_RigidBody2D" to="Light_RigidBody2D" method="_on_body_shape_entered"]
