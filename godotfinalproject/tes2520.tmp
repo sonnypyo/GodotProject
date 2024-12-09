@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://b47hxj5jx0tw"]
+
+[ext_resource type="PackedScene" uid="uid://b4yi3e7jsirko" path="res://ball.tscn" id="1_wo7b7"]
+[ext_resource type="Script" path="res://Line.gd" id="2_6aawq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msu21"]
+size = Vector2(20, 328.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ly0q7"]
+size = Vector2(438.5, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="wallX" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallX"]
+position = Vector2(-177, -51)
+shape = SubResource("RectangleShape2D_msu21")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wallX"]
+position = Vector2(255, -52.9375)
+shape = SubResource("RectangleShape2D_msu21")
+
+[node name="ball" parent="." instance=ExtResource("1_wo7b7")]
+position = Vector2(1, -2)
+
+[node name="Line2D" type="Line2D" parent="ball"]
+scale = Vector2(2, 2)
+points = PackedVector2Array(0, -1)
+script = ExtResource("2_6aawq")
+
+[node name="wallY" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wallY"]
+position = Vector2(39, 118)
+shape = SubResource("RectangleShape2D_ly0q7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wallY"]
+position = Vector2(45.75, -220)
+shape = SubResource("RectangleShape2D_ly0q7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5, 2)
+zoom = Vector2(0.3, 0.3)

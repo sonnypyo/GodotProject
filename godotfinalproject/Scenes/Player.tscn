@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyogdkh7a3qfk"]
+
+[ext_resource type="PackedScene" uid="uid://b4yi3e7jsirko" path="res://Scenes/ball.tscn" id="1_n30rt"]
+[ext_resource type="Script" path="res://Scripts/Line.gd" id="2_ojdyg"]
+
+[node name="Player" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ball" parent="." instance=ExtResource("1_n30rt")]
+position = Vector2(-55, -58)
+
+[node name="LineDraw" type="Line2D" parent="."]
+scale = Vector2(2, 2)
+points = PackedVector2Array(0, -1)
+script = ExtResource("2_ojdyg")
