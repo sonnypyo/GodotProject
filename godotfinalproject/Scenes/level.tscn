@@ -1,13 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://dq3ventwbxelb"]
+[gd_scene load_steps=8 format=3 uid="uid://dq3ventwbxelb"]
 
 [ext_resource type="PackedScene" uid="uid://bf7u5ip62xykb" path="res://Scenes/Chess8x8.tscn" id="2_qtksi"]
 [ext_resource type="PackedScene" uid="uid://bd0a3i52oyuvp" path="res://Scenes/character_body_2d.tscn" id="3_1m20a"]
 [ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="4_o2hln"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="4_xwche"]
+[ext_resource type="Texture2D" uid="uid://ds01ajuu2m8wt" path="res://Images/chessboardblackandwhite.png" id="5_t5vsl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27pbu"]
+texture = ExtResource("5_t5vsl")
+texture_region_size = Vector2i(60, 60)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_r2brh"]
+tile_size = Vector2i(60, 60)
+sources/0 = SubResource("TileSetAtlasSource_27pbu")
 
 [node name="Level1" type="Node2D"]
 
 [node name="Chess8x8" parent="." instance=ExtResource("2_qtksi")]
+visible = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -28,6 +41,7 @@ position = Vector2(1084, 841)
 zoom = Vector2(0.3, 0.3)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 z_index = -1
 offset_top = -239.0
 offset_right = 40.0
@@ -40,3 +54,11 @@ z_index = -2
 position = Vector2(1088, 838.467)
 scale = Vector2(5.20652, 9.5882)
 texture = ExtResource("4_o2hln")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, -242)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_r2brh")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 2, 0, 0, 4, 0, 0, 6, 0, 0, 1, 0, 1, 3, 0, 1, 5, 0, 1, 7, 0, 1, 65536, 0, 1, 196608, 0, 1, 327680, 0, 1, 458752, 0, 1, 131072, 0, 0, 262144, 0, 0, 393216, 0, 0, 524288, 0, 0, 65537, 0, 0, 131074, 0, 0, 196611, 0, 0, 262148, 0, 0, 327685, 0, 0, 393222, 0, 0, 458759, 0, 0, 65539, 0, 0, 131076, 0, 0, 196613, 0, 0, 262150, 0, 0, 327687, 0, 0, 65541, 0, 0, 131078, 0, 0, 196615, 0, 0, 65543, 0, 0, 196609, 0, 0, 262146, 0, 0, 327683, 0, 0, 393220, 0, 0, 458757, 0, 0, 524294, 0, 0, 327681, 0, 0, 393218, 0, 0, 458755, 0, 0, 524292, 0, 0, 458753, 0, 0, 524290, 0, 0, 524289, 0, 1, 393217, 0, 1, 458754, 0, 1, 524291, 0, 1, 262145, 0, 1, 327682, 0, 1, 393219, 0, 1, 458756, 0, 1, 524293, 0, 1, 131073, 0, 1, 196610, 0, 1, 262147, 0, 1, 327684, 0, 1, 393221, 0, 1, 458758, 0, 1, 524295, 0, 1, 65538, 0, 1, 131075, 0, 1, 196612, 0, 1, 262149, 0, 1, 327686, 0, 1, 393223, 0, 1, 65540, 0, 1, 131077, 0, 1, 196614, 0, 1, 262151, 0, 1, 65542, 0, 1, 131079, 0, 1)
