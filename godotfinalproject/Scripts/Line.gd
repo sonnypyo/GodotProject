@@ -2,7 +2,7 @@ extends Line2D
 #by 민성
 func _ready():
 	width = 4  # 선의 두께 설정
-	default_color = Color(1, 1, 0.8)  # 선 색상 설정
+	default_color = Color(1,0.87451, 0)  # 선 색상 설정
 
 func draw_line_between_points(start: Vector2, end: Vector2):
 	# 기존 점을 모두 지우기
