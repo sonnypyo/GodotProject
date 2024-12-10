@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpb5n5s5csm6"]
+
+[ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_g6fjm"]
+[ext_resource type="Texture2D" uid="uid://din082w53sir3" path="res://Images/hudHeart_full.png" id="2_loeuj"]
+
+[node name="Heart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hearts" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 3
+script = ExtResource("1_g6fjm")
+
+[node name="Heart1" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2_loeuj")
+stretch_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2_loeuj")
+stretch_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2_loeuj")
+stretch_mode = 2

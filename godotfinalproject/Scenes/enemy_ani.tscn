@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://df0vwyrwwiqdp"]
+[gd_scene load_steps=44 format=3 uid="uid://i577ssfoichu"]
 
 [ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="1_up73w"]
 [ext_resource type="Texture2D" uid="uid://bh4pknlqpcvl8" path="res://Sprites/Attack2.png" id="2_fmnq7"]
