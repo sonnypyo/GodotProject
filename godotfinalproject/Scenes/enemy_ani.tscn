@@ -958,11 +958,11 @@ speed_scale = 2.0
 
 [node name="DeadAniSprite" type="AnimatedSprite2D" parent="CloseEnemy"]
 sprite_frames = SubResource("SpriteFrames_amypd")
-frame_progress = 0.576041
+frame_progress = 0.157507
 
 [node name="Idel" type="AnimatedSprite2D" parent="CloseEnemy"]
 sprite_frames = SubResource("SpriteFrames_inxc4")
-frame_progress = 0.212671
+frame_progress = 0.794136
 
 [node name="RangedEnemy" type="Node2D" parent="."]
 position = Vector2(-1, 200)
@@ -996,7 +996,7 @@ sprite_frames = SubResource("SpriteFrames_hpl8b")
 
 [node name="Idle" type="AnimatedSprite2D" parent="Necromancer"]
 sprite_frames = SubResource("SpriteFrames_ic0k3")
-frame_progress = 0.0210046
+frame_progress = 0.602471
 
 [node name="Swawn Wall" type="Node2D" parent="."]
 
@@ -1004,16 +1004,18 @@ frame_progress = 0.0210046
 position = Vector2(413, -14)
 scale = Vector2(0.42, 0.42)
 sprite_frames = SubResource("SpriteFrames_byee7")
-frame_progress = 0.814239
+frame_progress = 0.395706
 
 [node name="Boss" type="Node2D" parent="."]
 position = Vector2(-200, 0)
 
 [node name="Idel" type="AnimatedSprite2D" parent="Boss"]
 sprite_frames = SubResource("SpriteFrames_0r45k")
-frame_progress = 0.120126
+frame_progress = 0.701592
 
 [node name="Shadow" type="AnimatedSprite2D" parent="Boss"]
 position = Vector2(2, 121)
 sprite_frames = SubResource("SpriteFrames_voh2n")
-frame_progress = 0.629396
+frame_progress = 0.210863
+
+[node name="Camera2D" type="Camera2D" parent="."]

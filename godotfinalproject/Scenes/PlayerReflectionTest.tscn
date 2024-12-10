@@ -34,7 +34,7 @@ position = Vector2(41, -255)
 shape = SubResource("RectangleShape2D_ly0q7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.3, 0.3)
+zoom = Vector2(1.17, 1.17)
 limit_left = -9999998
 
 [node name="Player" parent="." instance=ExtResource("1_8rdge")]
