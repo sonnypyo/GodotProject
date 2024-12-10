@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cag8qq8oi3h8r"]
 
-[ext_resource type="PackedScene" path="res://Scenes/ball.tscn" id="1_n30rt"]
+[ext_resource type="PackedScene" uid="uid://b4yi3e7jsirko" path="res://Scenes/ball.tscn" id="1_n30rt"]
 [ext_resource type="Script" path="res://Scripts/Line.gd" id="2_ojdyg"]
 
 [node name="Player" type="Control"]

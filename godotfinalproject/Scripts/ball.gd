@@ -17,6 +17,14 @@ func _ready():
 	
 func _physics_process(delta):
 	get_parent().get_node("LineDraw").clear_points()
+	if turn == max_turn:
+		isRunning = false
+		transformlist.clear()
+		transformlist.append(position)
+		turn = 0
+		velocity = Vector2.ZERO
+		
+	
 	# 키 입력으로 속도 조정
 	#velocity = Vector2.ZERO  # 기본적으로 멈춤
 	get_local_mouse_position()
