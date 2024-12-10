@@ -1,5 +1,5 @@
 extends Node2D
-
+#손준표
 @onready var animated_sprite = $AnimatedSprite2DPlayer  # 정확한 경로를 지정
 
 func _ready():
