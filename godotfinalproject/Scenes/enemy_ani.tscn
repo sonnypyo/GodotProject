@@ -1,6 +1,7 @@
-[gd_scene load_steps=141 format=3 uid="uid://df0vwyrwwiqdp"]
+[gd_scene load_steps=143 format=3 uid="uid://df0vwyrwwiqdp"]
 
 [ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="1_up73w"]
+[ext_resource type="Texture2D" uid="uid://b3alabcqplh2m" path="res://Images/CloseEnemy.png" id="1_x1op1"]
 [ext_resource type="Texture2D" uid="uid://bh4pknlqpcvl8" path="res://Sprites/Attack2.png" id="2_fmnq7"]
 [ext_resource type="Texture2D" uid="uid://fw802o5lwx55" path="res://Sprites/Death.png" id="3_4277b"]
 [ext_resource type="Texture2D" uid="uid://yf2kx8ywyog7" path="res://Sprites/Idle.png" id="4_pdlbu"]
@@ -8,84 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://c1op8ofguxt20" path="res://Sprites/FlyingObelisk_no_lightnings_no_letter.png" id="5_2lm5k"]
 [ext_resource type="Texture2D" uid="uid://sb6gh81elxwe" path="res://Sprites/Agis.png" id="6_foh34"]
 [ext_resource type="Texture2D" uid="uid://bn0ad841en632" path="res://Sprites/mage_atk2.png" id="7_pvuak"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sc8kj"]
-atlas = ExtResource("1_up73w")
-region = Rect2(0, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ellx"]
-atlas = ExtResource("1_up73w")
-region = Rect2(140, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jsrjy"]
-atlas = ExtResource("1_up73w")
-region = Rect2(280, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mgfqq"]
-atlas = ExtResource("1_up73w")
-region = Rect2(420, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x4tu7"]
-atlas = ExtResource("1_up73w")
-region = Rect2(560, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aj1sp"]
-atlas = ExtResource("1_up73w")
-region = Rect2(700, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uwtql"]
-atlas = ExtResource("1_up73w")
-region = Rect2(840, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iqw6w"]
-atlas = ExtResource("1_up73w")
-region = Rect2(980, 186, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ti4l"]
-atlas = ExtResource("1_up73w")
-region = Rect2(0, 279, 140, 93)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ajvxb"]
-atlas = ExtResource("1_up73w")
-region = Rect2(140, 279, 140, 93)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_y431f"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sc8kj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ellx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jsrjy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mgfqq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x4tu7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aj1sp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uwtql")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iqw6w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5ti4l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ajvxb")
-}],
-"loop": true,
-"name": &"HitAnimiSprite",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cpggk"]
 atlas = ExtResource("1_up73w")
@@ -165,6 +88,84 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sc8kj"]
+atlas = ExtResource("1_up73w")
+region = Rect2(0, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ellx"]
+atlas = ExtResource("1_up73w")
+region = Rect2(140, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsrjy"]
+atlas = ExtResource("1_up73w")
+region = Rect2(280, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgfqq"]
+atlas = ExtResource("1_up73w")
+region = Rect2(420, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4tu7"]
+atlas = ExtResource("1_up73w")
+region = Rect2(560, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj1sp"]
+atlas = ExtResource("1_up73w")
+region = Rect2(700, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwtql"]
+atlas = ExtResource("1_up73w")
+region = Rect2(840, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqw6w"]
+atlas = ExtResource("1_up73w")
+region = Rect2(980, 186, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ti4l"]
+atlas = ExtResource("1_up73w")
+region = Rect2(0, 279, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajvxb"]
+atlas = ExtResource("1_up73w")
+region = Rect2(140, 279, 140, 93)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y431f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sc8kj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ellx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsrjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgfqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4tu7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj1sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwtql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqw6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ti4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajvxb")
+}],
+"loop": true,
+"name": &"HitAnimiSprite",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4y15"]
 atlas = ExtResource("1_up73w")
 region = Rect2(0, 0, 140, 106)
@@ -228,6 +229,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dkgw"]
+size = Vector2(40, 60)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mrshq"]
 atlas = ExtResource("2_fmnq7")
@@ -949,20 +953,31 @@ animations = [{
 
 [node name="CloseEnemy" type="Node2D" parent="."]
 
-[node name="HitAniSprite" type="AnimatedSprite2D" parent="CloseEnemy"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CloseEnemy"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CloseEnemy/CharacterBody2D"]
+position = Vector2(31, 12)
+scale = Vector2(0.308624, 0.308624)
+texture = ExtResource("1_x1op1")
+
+[node name="DeadAniSprite" type="AnimatedSprite2D" parent="CloseEnemy/CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_amypd")
+frame_progress = 0.157507
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="CloseEnemy/CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_y431f")
 animation = &"HitAnimiSprite"
 frame = 7
 frame_progress = 0.884257
 speed_scale = 2.0
 
-[node name="DeadAniSprite" type="AnimatedSprite2D" parent="CloseEnemy"]
-sprite_frames = SubResource("SpriteFrames_amypd")
-frame_progress = 0.157507
-
-[node name="Idel" type="AnimatedSprite2D" parent="CloseEnemy"]
+[node name="Idel" type="AnimatedSprite2D" parent="CloseEnemy/CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_inxc4")
 frame_progress = 0.794136
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy/CharacterBody2D"]
+position = Vector2(34, 15)
+shape = SubResource("RectangleShape2D_0dkgw")
 
 [node name="RangedEnemy" type="Node2D" parent="."]
 position = Vector2(-1, 200)
@@ -983,7 +998,7 @@ frame = 1
 frame_progress = 0.370625
 
 [node name="Necromancer" type="Node2D" parent="."]
-position = Vector2(200, 0)
+position = Vector2(300, 0)
 scale = Vector2(2, 2)
 
 [node name="Spawn" type="AnimatedSprite2D" parent="Necromancer"]
@@ -995,6 +1010,7 @@ frame_progress = 0.98436
 sprite_frames = SubResource("SpriteFrames_hpl8b")
 
 [node name="Idle" type="AnimatedSprite2D" parent="Necromancer"]
+position = Vector2(4.5, 0)
 sprite_frames = SubResource("SpriteFrames_ic0k3")
 frame_progress = 0.602471
 

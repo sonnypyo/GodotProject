@@ -2,6 +2,7 @@ extends Area2D
 #by 민성
 # 속도를 저장할 변수
 @export var LineDrawScene: PackedScene
+
 var velocity = Vector2.ZERO
 var speed = 750  # 속도의 크기
 
