@@ -2,7 +2,8 @@ extends Area2D
 #by 민성
 # 속도를 저장할 변수
 @export var LineDrawScene: PackedScene
-
+var mapSizeX = 4
+var mapSizeY = 4
 var velocity = Vector2.ZERO
 var speed = 750  # 속도의 크기
 var isOnCollider = false
@@ -97,8 +98,8 @@ func get_tile_coordinates(XYposition: Vector2) -> Vector2:
 		tile_y = -floor(-XYposition.y / 60)
 	elif true:
 		tile_y = floor(XYposition.y / 60)
-	tile_x = clamp(tile_x, -4, 4)
-	tile_y = clamp(tile_y, -4, 4)#이탈방지
+	tile_x = clamp(tile_x, -mapSizeX, mapSizeX)
+	tile_y = clamp(tile_y, -mapSizeY, mapSizeY)#이탈방지
 	print("%n",tile_x, tile_y)
 	
 	return Vector2(tile_x, tile_y)
