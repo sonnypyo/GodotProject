@@ -5,7 +5,7 @@ extends Area2D
 var mapSizeX = 4
 var mapSizeY = 4
 var velocity = Vector2.ZERO
-var speed = 750  # 속도의 크기
+var speed = 300  # 속도의 크기
 var isOnCollider = false
 var transformlist: Array = []
 var turn = 0
@@ -14,8 +14,8 @@ var lindDraw: Line2D
 var isRunning = false
 func _ready():
 	# 초기화 코드
-	transformlist.append(position)
-	print(turn, position.x, position.y)
+	transformlist.append(global_position)
+	print(turn, global_position.x, global_position.y)
 	
 func _physics_process(delta):
 	get_parent().get_node("LineDraw").clear_points()
@@ -23,16 +23,16 @@ func _physics_process(delta):
 		$PlayerAnim.visible = true
 		transformlist.clear()
 		turn = 0
-		var vec = get_tile_coordinates(position)
-		if position.x>0:
-			position.x = (vec.x-0.5)*60
+		var vec = get_tile_coordinates(global_position)
+		if global_position.x>0:
+			global_position.x = (vec.x-0.5)*60
 		elif true:
-			position.x = (vec.x+0.5)*60
-		if position.y>0:
-			position.y = (vec.y-0.5)*60
+			global_position.x = (vec.x+0.5)*60
+		if global_position.y>0:
+			global_position.y = (vec.y-0.5)*60
 		elif true:
-			position.y = (vec.y+0.5)*60
-		transformlist.append(position)
+			global_position.y = (vec.y+0.5)*60
+		transformlist.append(global_position)
 		
 		
 	
@@ -49,10 +49,10 @@ func _physics_process(delta):
 	velocity = velocity.normalized() * speed
 
 	# 위치 업데이트
-	position += velocity * delta  # 현재 위치에 속도를 곱해 업데이트	
+	global_position += velocity * delta  # 현재 위치에 속도를 곱해 업데이트	
 	for i in range(turn+1):
 		if i==turn:
-			get_parent().get_node("LineDraw").draw_line_between_points(transformlist[i],position)
+			get_parent().get_node("LineDraw").draw_line_between_points(transformlist[i],global_position)
 		elif true:
 			get_parent().get_node("LineDraw").draw_line_between_points(transformlist[i], transformlist[i+1])
 
@@ -64,23 +64,33 @@ func _on_area_entered(area: Area2D) -> void:
 		if area.name == "wallX":
 			get_parent().get_node("LineDraw").clear_points()
 			velocity.x *= -1
-			transformlist.append(position)
+			transformlist.append(global_position)
 			turn+=1
 			if turn >= max_turn:
 				velocity = Vector2.ZERO
 				isRunning = false
 			set_physics_process(true)
-			print(turn, position.x, position.y)
+			print(turn, global_position.x, global_position.y)
 		elif area.name == "wallY":
 			get_parent().get_node("LineDraw").clear_points()
 			velocity.y *= -1
-			transformlist.append(position)
+			transformlist.append(global_position)
 			turn+=1
 			if turn >= max_turn:
 				velocity = Vector2.ZERO
 				isRunning = false
 			set_physics_process(true)
-			print(turn, position.x, position.y)
+			print(turn, global_position.x, global_position.y)
+		elif area.name == "obstacle":
+			get_parent().get_node("LineDraw").clear_points()
+			transformlist.append(global_position)
+			turn = max_turn
+			if turn >= max_turn:
+				velocity = Vector2.ZERO
+				isRunning = false
+			set_physics_process(true)
+			
+			
 
 func _on_area_exited(area: Area2D) -> void:
 	print("탈출")
