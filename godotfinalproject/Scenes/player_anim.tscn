@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://dktml3foq310h"]
+[gd_scene load_steps=89 format=3 uid="uid://cahh7qldr5ias"]
 
 [ext_resource type="Texture2D" uid="uid://qehq3a38hm8" path="res://Sprites/Lightning Mage/Idle.png" id="1_b36oj"]
 [ext_resource type="Script" path="res://Scenes/player_anim.gd" id="1_ngba0"]
@@ -609,4 +609,5 @@ script = ExtResource("1_ngba0")
 position = Vector2(12, -89)
 scale = Vector2(1.39062, 1.39062)
 sprite_frames = SubResource("SpriteFrames_eyy1r")
-animation = &"Hit"
+animation = &"Idel"
+frame_progress = 0.965071

@@ -2,10 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://i0mhx5p7vkur" path="res://Images/Light2.png" id="1_eyq2e"]
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_qsdek"]
-[ext_resource type="PackedScene" uid="uid://dktml3foq310h" path="res://Scenes/player_anim.tscn" id="2_hjjfp"]
+[ext_resource type="PackedScene" uid="uid://cahh7qldr5ias" path="res://Scenes/player_anim.tscn" id="2_hjjfp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4pnyc"]
-radius = 20.0
 
 [node name="ball" type="Area2D"]
 script = ExtResource("1_qsdek")
@@ -13,11 +12,12 @@ script = ExtResource("1_qsdek")
 [node name="PlayerAnim" parent="." instance=ExtResource("2_hjjfp")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, 0.999994)
-scale = Vector2(0.44405, 0.448718)
+position = Vector2(0.207571, 1.23333)
+scale = Vector2(0.344818, 0.357436)
 texture = ExtResource("1_eyq2e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4pnyc")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

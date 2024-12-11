@@ -5,7 +5,7 @@ extends Area2D
 
 var velocity = Vector2.ZERO
 var speed = 750  # 속도의 크기
-
+var isOnCollider = false
 var transformlist: Array = []
 var turn = 0
 var max_turn = 5
@@ -18,11 +18,10 @@ func _ready():
 	
 func _physics_process(delta):
 	get_parent().get_node("LineDraw").clear_points()
-	if turn == max_turn:
-		isRunning = false
+	if turn >= max_turn:
+		$PlayerAnim.visible = true
 		transformlist.clear()
 		turn = 0
-		velocity = Vector2.ZERO
 		var vec = get_tile_coordinates(position)
 		if position.x>0:
 			position.x = (vec.x-0.5)*60
@@ -43,6 +42,7 @@ func _physics_process(delta):
 		if Input.is_key_pressed(KEY_R):
 			if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 				isRunning = true
+				$PlayerAnim.visible = false
 				velocity = get_local_mouse_position()
 	# 속도 크기 조정
 	velocity = velocity.normalized() * speed
@@ -57,28 +57,36 @@ func _physics_process(delta):
 
 		
 func _on_area_entered(area: Area2D) -> void:
-	if area.name == "wallX":
-		get_parent().get_node("LineDraw").clear_points()
-		velocity.x *= -1
-		transformlist.append(position)
-		turn+=1
-		print(turn, position.x, position.y)
-	elif area.name == "wallY":
-		get_parent().get_node("LineDraw").clear_points()
-		velocity.y *= -1
-		transformlist.append(position)
-		turn+=1
-		print(turn, position.x, position.y)
-		
+	if !isOnCollider:
+		isOnCollider = true
+		set_physics_process(false)
+		if area.name == "wallX":
+			get_parent().get_node("LineDraw").clear_points()
+			velocity.x *= -1
+			transformlist.append(position)
+			turn+=1
+			if turn >= max_turn:
+				velocity = Vector2.ZERO
+				isRunning = false
+			set_physics_process(true)
+			print(turn, position.x, position.y)
+		elif area.name == "wallY":
+			get_parent().get_node("LineDraw").clear_points()
+			velocity.y *= -1
+			transformlist.append(position)
+			turn+=1
+			if turn >= max_turn:
+				velocity = Vector2.ZERO
+				isRunning = false
+			set_physics_process(true)
+			print(turn, position.x, position.y)
+
+func _on_area_exited(area: Area2D) -> void:
+	print("탈출")
+	isOnCollider = false			
+
 # 특정 좌표가 어떤 타일에 있는지 계산하는 함수
 func get_tile_coordinates(XYposition: Vector2) -> Vector2:
-	"""
-	주어진 좌표가 어떤 타일에 위치하는지 계산합니다.
-	:param position: 입력 좌표 (Vector2)
-	:param tile_size: 타일의 한 변 크기 (픽셀 단위)
-	:return: 타일 좌표 (Vector2) - 중심이 (0, 0)임
-	"""
-	# 좌표를 타일 크기로 나눈 뒤 반올림하여 타일 좌표 계산
 	var tile_x
 	var tile_y
 	if XYposition.x > 0:
@@ -89,6 +97,8 @@ func get_tile_coordinates(XYposition: Vector2) -> Vector2:
 		tile_y = -floor(-XYposition.y / 60)
 	elif true:
 		tile_y = floor(XYposition.y / 60)
+	tile_x = clamp(tile_x, -4, 4)
+	tile_y = clamp(tile_y, -4, 4)#이탈방지
 	print("%n",tile_x, tile_y)
 	
 	return Vector2(tile_x, tile_y)
