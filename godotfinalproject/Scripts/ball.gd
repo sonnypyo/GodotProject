@@ -19,6 +19,7 @@ func _ready():
 	
 func _physics_process(delta):
 	get_parent().get_node("LineDraw").clear_points()
+<<<<<<< Updated upstream
 	if turn >= max_turn:
 		$PlayerAnim.visible = true
 		transformlist.clear()
@@ -43,6 +44,14 @@ func _physics_process(delta):
 			global_position.y = (vec.y+0.5)*60
 		transformlist.append(global_position)
 		
+=======
+	if turn == max_turn:
+		isRunning = false
+		transformlist.clear()
+		transformlist.append(position)
+		turn = 0
+		velocity = Vector2.ZERO
+>>>>>>> Stashed changes
 		
 	
 	# 키 입력으로 속도 조정
