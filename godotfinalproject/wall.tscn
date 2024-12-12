@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://5kbfihyf100x"]
+[gd_scene load_steps=4 format=3 uid="uid://xt1kd8q7851y"]
 
-[ext_resource type="Texture2D" uid="uid://berdr4d1wsjr0" path="res://Images/Wall.png" id="1_3fepy"]
+[ext_resource type="Texture2D" uid="uid://berdr4d1wsjr0" path="res://Images/Wall.png" id="1_h8xit"]
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_bc0mj"]
 length = 287.629
@@ -9,32 +9,28 @@ length = 287.629
 length = 287.629
 
 [node name="wall" type="Sprite2D"]
-position = Vector2(64.7656, 57.5313)
+position = Vector2(32, 21)
 scale = Vector2(0.208602, 0.208602)
-texture = ExtResource("1_3fepy")
+texture = ExtResource("1_h8xit")
 
 [node name="obstacle" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(56.5565, 54.8508)
+position = Vector2(134.227, -100.67)
 rotation = 1.5708
-scale = Vector2(4.785, 4.785)
 shape = SubResource("SeparationRayShape2D_bc0mj")
 one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(56.5565, 182.851)
+position = Vector2(134.227, 186.959)
 rotation = 1.5708
-scale = Vector2(4.785, 4.785)
 shape = SubResource("SeparationRayShape2D_bc0mj")
 one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(56.5565, 54.8508)
-scale = Vector2(4.785, 4.785)
+position = Vector2(134.227, -100.67)
 shape = SubResource("SeparationRayShape2D_gvkam")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(-71.4435, 54.8508)
-scale = Vector2(4.785, 4.785)
+position = Vector2(-153.402, -100.67)
 shape = SubResource("SeparationRayShape2D_gvkam")
