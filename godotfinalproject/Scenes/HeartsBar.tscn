@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv2crttc6rgjy"]
+
+[ext_resource type="Script" path="res://Scripts/hearts_bar.gd" id="1_y2lyl"]
+[ext_resource type="Texture2D" uid="uid://iudaiehwiwak" path="res://Images/hudHeart_full.png" id="2_hnush"]
+
+[node name="HeartsBar" type="HBoxContainer"]
+script = ExtResource("1_y2lyl")
+
+[node name="Heart1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_hnush")
+
+[node name="Heart2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_hnush")
+
+[node name="Heart3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_hnush")
