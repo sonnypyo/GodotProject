@@ -227,7 +227,7 @@ size = Vector2(40, 60)
 
 [node name="CloseEnemy" type="Node2D" parent="."]
 position = Vector2(-25, -260)
-scale = Vector2(1.54505, 1.54505)
+scale = Vector2(1.56193, 1.54505)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="CloseEnemy"]
 script = ExtResource("2_l77ta")

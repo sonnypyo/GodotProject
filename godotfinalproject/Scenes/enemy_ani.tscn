@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://df0vwyrwwiqdp"]
+[gd_scene load_steps=130 format=3 uid="uid://df0vwyrwwiqdp"]
 
 [ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="1_up73w"]
 [ext_resource type="Texture2D" uid="uid://b3alabcqplh2m" path="res://Images/CloseEnemy.png" id="1_x1op1"]
@@ -226,6 +226,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dkgw"]
 size = Vector2(40, 60)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stlnp"]
+size = Vector2(20, 56)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_mrshq"]
 atlas = ExtResource("2_fmnq7")
 region = Rect2(327, 17, 231, 182)
@@ -293,7 +296,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dlavy")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Hit",
 "speed": 5.0
 }]
 
@@ -350,7 +353,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_evi1m")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Dead",
 "speed": 5.0
 }]
 
@@ -414,7 +417,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_c2qud")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Idel",
 "speed": 5.0
 }]
 
@@ -891,20 +894,27 @@ shape = SubResource("RectangleShape2D_0dkgw")
 [node name="RangedEnemy" type="Node2D" parent="."]
 position = Vector2(-1, 200)
 
-[node name="HitAniSprite" type="AnimatedSprite2D" parent="RangedEnemy"]
-sprite_frames = SubResource("SpriteFrames_37x77")
-frame_progress = 0.404634
+[node name="RangeEnemy" type="CharacterBody2D" parent="RangedEnemy"]
 
-[node name="DeadAniSprite" type="AnimatedSprite2D" parent="RangedEnemy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangedEnemy/RangeEnemy"]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_stlnp")
+
+[node name="Sprite2D" type="Sprite2D" parent="RangedEnemy/RangeEnemy"]
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="RangedEnemy/RangeEnemy"]
+position = Vector2(65, -18)
+sprite_frames = SubResource("SpriteFrames_37x77")
+animation = &"Hit"
+
+[node name="DeadAniSprite" type="AnimatedSprite2D" parent="RangedEnemy/RangeEnemy"]
 position = Vector2(-3, -15)
 sprite_frames = SubResource("SpriteFrames_qanyv")
-frame = 2
-frame_progress = 0.521139
+animation = &"Dead"
 
-[node name="Idle" type="AnimatedSprite2D" parent="RangedEnemy"]
+[node name="Idel" type="AnimatedSprite2D" parent="RangedEnemy/RangeEnemy"]
 sprite_frames = SubResource("SpriteFrames_no7y4")
-frame = 1
-frame_progress = 0.370625
+animation = &"Idel"
 
 [node name="Necromancer" type="Node2D" parent="."]
 position = Vector2(300, 0)
