@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmmk31d282i46"]
+[gd_scene load_steps=3 format=3 uid="uid://cmmk31d282i46"]
 
 [ext_resource type="Script" path="res://Scenes/GodotCredits.gd" id="1_478fc"]
+[ext_resource type="Texture2D" uid="uid://4qoxh74n8iiv" path="res://Images/Credits.png" id="2_eas0e"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -11,11 +12,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_478fc")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 1)
+offset_right = 158.0
+offset_bottom = 662.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.879916, 0.498382)
+texture = ExtResource("2_eas0e")
 
 [node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 0

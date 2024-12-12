@@ -1,8 +1,7 @@
 extends Control
 
-@export var bg_color : Color = Color.BLACK
 @export var to_scene : PackedScene = null
-@export var title_color := Color.BLUE_VIOLET
+@export var title_color := Color.BLACK
 @export var text_color := Color.WHITE
 @export var title_font : FontFile = null
 @export var text_font : FontFile = null
@@ -18,7 +17,6 @@ const speed_up_multiplier := 10.0
 var scroll_speed : float = base_speed
 var speed_up := false
 
-@onready var colorrect := $ColorRect
 @onready var videoplayer := $VideoPlayer
 @onready var line := $CreditsContainer/Line
 var started := false
@@ -68,7 +66,6 @@ var credits = [
 ]
 
 func _ready():
-	colorrect.color = bg_color
 	videoplayer.set_stream(Video)
 	if !Use_Video_Audio:
 		var stream = AudioStreamPlayer.new()
