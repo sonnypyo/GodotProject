@@ -47,15 +47,3 @@ offset_bottom = 91.0
 
 [node name="wall2" parent="." instance=ExtResource("3_6qm38")]
 position = Vector2(90, -90)
-
-[node name="wall3" parent="." instance=ExtResource("3_6qm38")]
-position = Vector2(90, -30)
-
-[node name="wall4" parent="." instance=ExtResource("3_6qm38")]
-position = Vector2(-90, 30)
-
-[node name="wall5" parent="." instance=ExtResource("3_6qm38")]
-position = Vector2(-90, -90)
-
-[node name="wall6" parent="." instance=ExtResource("3_6qm38")]
-position = Vector2(-90, -30)
