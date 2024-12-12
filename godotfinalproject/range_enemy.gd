@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var RangeHit = $HitAniSprite
 @onready var RangeDead = $DeadAniSprite
 
+
 func _ready():
 	# 기본 애니메이션 실행 전, 모든 스프라이트를 끔
 	RangeIdel.visible = false
