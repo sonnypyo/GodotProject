@@ -9,8 +9,8 @@ length = 128.0
 length = 128.0
 
 [node name="wall" type="Sprite2D"]
-position = Vector2(90, 30)
-scale = Vector2(0.46875, 0.46875)
+position = Vector2(84.2656, 18.5313)
+scale = Vector2(0.409633, 0.409633)
 texture = ExtResource("1_3fepy")
 
 [node name="obstacle" type="Area2D" parent="."]
