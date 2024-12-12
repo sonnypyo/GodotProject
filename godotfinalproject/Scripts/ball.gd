@@ -23,7 +23,16 @@ func _physics_process(delta):
 		$PlayerAnim.visible = true
 		transformlist.clear()
 		turn = 0
-		var vec = get_tile_coordinates(global_position)
+		var tunedPos = global_position
+		if velocity.x < 0:
+			tunedPos.x += 15
+		elif velocity.x > 0:
+			tunedPos.x -= 15
+		if velocity.y < 0:
+			tunedPos.y += 15
+		elif velocity.y > 0:
+			tunedPos.y -= 15
+		var vec = get_tile_coordinates(tunedPos)
 		if global_position.x>0:
 			global_position.x = (vec.x-0.5)*60
 		elif true:

@@ -48,5 +48,4 @@ position = Vector2(89, -30)
 scale = Vector2(0.470436, 0.470436)
 
 [node name="wall2" parent="." instance=ExtResource("3_6qm38")]
-position = Vector2(-92, 27)
-scale = Vector2(0.211217, 0.211217)
+position = Vector2(90, -90)
