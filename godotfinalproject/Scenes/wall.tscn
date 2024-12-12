@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6pg50ohs1ubn"]
 
-[ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://Images/icon.svg" id="1_810g5"]
+[ext_resource type="Texture2D" uid="uid://berdr4d1wsjr0" path="res://Images/Wall.png" id="1_3fepy"]
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_bc0mj"]
 length = 128.0
@@ -11,7 +11,7 @@ length = 128.0
 [node name="wall" type="Sprite2D"]
 position = Vector2(90, 30)
 scale = Vector2(0.46875, 0.46875)
-texture = ExtResource("1_810g5")
+texture = ExtResource("1_3fepy")
 
 [node name="obstacle" type="Area2D" parent="."]
 
