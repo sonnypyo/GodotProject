@@ -1,0 +1,13 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dr5xrn4flym1f"]
+
+[ext_resource type="Texture2D" uid="uid://ds01ajuu2m8wt" path="res://Images/chessboardblackandwhite.png" id="1_3cvfe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khkfj"]
+texture = ExtResource("1_3cvfe")
+texture_region_size = Vector2i(60, 60)
+0:0/0 = 0
+0:1/0 = 0
+
+[resource]
+tile_size = Vector2i(60, 60)
+sources/0 = SubResource("TileSetAtlasSource_khkfj")
