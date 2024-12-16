@@ -655,7 +655,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_0r88f")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Dead",
 "speed": 5.0
 }]
 
@@ -892,7 +892,7 @@ position = Vector2(34, 15)
 shape = SubResource("RectangleShape2D_0dkgw")
 
 [node name="RangedEnemy" type="Node2D" parent="."]
-position = Vector2(-1, 200)
+position = Vector2(-2, 200)
 
 [node name="RangeEnemy" type="CharacterBody2D" parent="RangedEnemy"]
 
@@ -922,15 +922,16 @@ scale = Vector2(2, 2)
 
 [node name="NecromancerSprite2D" type="AnimatedSprite2D" parent="Necromancer"]
 sprite_frames = SubResource("SpriteFrames_ruxbc")
-animation = &"Idel"
+animation = &"Spwan"
 
 [node name="DeadAniNecrom" type="AnimatedSprite2D" parent="Necromancer"]
 sprite_frames = SubResource("SpriteFrames_hpl8b")
+animation = &"Dead"
 
 [node name="Swawn Wall" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Swawn Wall"]
-position = Vector2(413, -14)
+position = Vector2(3.05176e-05, -1)
 scale = Vector2(0.42, 0.42)
 sprite_frames = SubResource("SpriteFrames_byee7")
 frame_progress = 0.395706

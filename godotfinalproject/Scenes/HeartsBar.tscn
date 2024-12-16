@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv2crttc6rgjy"]
+[gd_scene load_steps=3 format=3 uid="uid://f73260dclatg"]
 
 [ext_resource type="Script" path="res://Scripts/hearts_bar.gd" id="1_y2lyl"]
 [ext_resource type="Texture2D" uid="uid://iudaiehwiwak" path="res://Images/hudHeart_full.png" id="2_hnush"]

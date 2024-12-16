@@ -1,8 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://bo01pxnq226aw"]
+[gd_scene load_steps=36 format=3 uid="uid://bo01pxnq226aw"]
 
+[ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="1_ifok5"]
 [ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="1_ub12y"]
 [ext_resource type="Script" path="res://Scenes/close_enemy.gd" id="2_l77ta"]
 [ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="3_2ip3g"]
+[ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="4_p3ujq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cpggk"]
 atlas = ExtResource("3_2ip3g")
@@ -223,10 +225,46 @@ size = Vector2(40, 60)
 
 [node name="Level_0" type="Node2D"]
 
+[node name="Dsf" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-94, 11)
+scale = Vector2(3.28201, 3.28201)
+texture = ExtResource("1_ifok5")
+
 [node name="PlayerReflectionTest" parent="." instance=ExtResource("1_ub12y")]
 
+[node name="CloseEnemy3" type="Node2D" parent="."]
+position = Vector2(98, -261)
+scale = Vector2(1.54169, 1.50855)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="CloseEnemy3"]
+script = ExtResource("2_l77ta")
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="CloseEnemy3/CloseEnemy"]
+sprite_frames = SubResource("SpriteFrames_cp6hw")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy3/CloseEnemy"]
+position = Vector2(34, 15)
+shape = SubResource("RectangleShape2D_vgf2y")
+
+[node name="CloseEnemy2" type="Node2D" parent="."]
+position = Vector2(-140, -257)
+scale = Vector2(1.49132, 1.45926)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="CloseEnemy2"]
+script = ExtResource("2_l77ta")
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="CloseEnemy2/CloseEnemy"]
+sprite_frames = SubResource("SpriteFrames_cp6hw")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy2/CloseEnemy"]
+position = Vector2(34, 15)
+shape = SubResource("RectangleShape2D_vgf2y")
+
 [node name="CloseEnemy" type="Node2D" parent="."]
-position = Vector2(-25, -260)
+position = Vector2(-23, -261)
 scale = Vector2(1.56193, 1.54505)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="CloseEnemy"]
@@ -239,3 +277,10 @@ animation = &"Hit"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy/CloseEnemy"]
 position = Vector2(34, 15)
 shape = SubResource("RectangleShape2D_vgf2y")
+
+[node name="HeartsBar" parent="." instance=ExtResource("4_p3ujq")]
+offset_left = -574.0
+offset_top = -323.0
+offset_right = -182.0
+offset_bottom = -195.0
+scale = Vector2(0.416884, 0.416884)
