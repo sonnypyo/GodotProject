@@ -12,6 +12,7 @@ var turn = 0
 var max_turn = 5
 var lindDraw: Line2D
 var isRunning = false
+
 func _ready():
 	# 초기화 코드
 	transformlist.append(global_position)
@@ -97,6 +98,9 @@ func _on_area_entered(area: Area2D) -> void:
 			if turn >= max_turn:
 				velocity = Vector2.ZERO
 				isRunning = false
+			set_physics_process(true)
+		elif area.name == "몹":
+			print("몹 건드림")
 			set_physics_process(true)
 			
 			
