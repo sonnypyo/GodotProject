@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bo01pxnq226aw"]
+[gd_scene load_steps=41 format=3 uid="uid://bo01pxnq226aw"]
 
 [ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="1_ifok5"]
 [ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="1_ub12y"]
@@ -118,6 +118,26 @@ region = Rect2(840, 0, 140, 93)
 atlas = ExtResource("3_2ip3g")
 region = Rect2(980, 0, 140, 93)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_56t7e"]
+atlas = ExtResource("3_2ip3g")
+region = Rect2(140, 279, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luf6e"]
+atlas = ExtResource("3_2ip3g")
+region = Rect2(280, 279, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3d2w"]
+atlas = ExtResource("3_2ip3g")
+region = Rect2(420, 279, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4klim"]
+atlas = ExtResource("3_2ip3g")
+region = Rect2(560, 279, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10r14"]
+atlas = ExtResource("3_2ip3g")
+region = Rect2(700, 279, 140, 93)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_cp6hw"]
 animations = [{
 "frames": [{
@@ -218,6 +238,26 @@ animations = [{
 "loop": true,
 "name": &"Idel",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56t7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luf6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3d2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4klim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10r14")
+}],
+"loop": false,
+"name": &"sick",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgf2y"]
@@ -242,7 +282,7 @@ script = ExtResource("2_l77ta")
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="CloseEnemy3/CloseEnemy"]
 sprite_frames = SubResource("SpriteFrames_cp6hw")
-animation = &"Hit"
+animation = &"sick"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy3/CloseEnemy"]
 position = Vector2(34, 15)
@@ -275,7 +315,7 @@ sprite_frames = SubResource("SpriteFrames_cp6hw")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy/CloseEnemy"]
-position = Vector2(34, 15)
+position = Vector2(33.9324, 14.8862)
 shape = SubResource("RectangleShape2D_vgf2y")
 
 [node name="HeartsBar" parent="." instance=ExtResource("4_p3ujq")]

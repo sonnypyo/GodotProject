@@ -104,8 +104,16 @@ func _on_area_entered(area: Area2D) -> void:
 			set_physics_process(true)
 			
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "몹":
+	if body.name == "CloseEnemy":
 		print("몹 건드림")
+		if body.has_method("damage"): # damage 메서드가 있는지 확인
+			body.damage()
+	elif body.name == "RangeEnemy":
+		print("원거리 건드림")
+	elif body.name == "Necromancer":
+		print("네크로 건드림")
+	elif body.name == "Boss":
+		print("보스 건드림")
 
 func _on_area_exited(area: Area2D) -> void:
 	print("탈출")
