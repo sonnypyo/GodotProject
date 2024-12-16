@@ -1,27 +1,40 @@
-[gd_scene load_steps=6 format=4 uid="uid://bsj5e1ugli04p"]
+[gd_scene load_steps=12 format=4 uid="uid://bsj5e1ugli04p"]
 
 [ext_resource type="TileSet" uid="uid://dr5xrn4flym1f" path="res://tileset/new_tile_set.tres" id="1_m75n5"]
 [ext_resource type="Script" path="res://Scripts/path_finding_node.gd" id="1_xr2ct"]
 [ext_resource type="Script" path="res://Scenes/moving1YJS.gd" id="2_g38e6"]
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://Images/icon.svg" id="3_hmves"]
+[ext_resource type="Texture2D" uid="uid://dx1cibhxw7gfc" path="res://Images/LightChessPlayer.png" id="5_8k047"]
+[ext_resource type="Script" path="res://Scenes/character_body_2d_3.gd" id="6_1fwim"]
+[ext_resource type="Texture2D" uid="uid://1n748tp7556i" path="res://Sprites/33428_28968_050.png" id="7_ho22b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oukqi"]
 
-[node name="AStar" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eg0i2"]
+size = Vector2(33, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07qvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqdda"]
+
+[node name="AStar" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_xr2ct")
 top_right = Vector2i(7, 7)
+start_pos = Vector2i(6, 0)
 target_pos = Vector2i(7, 7)
 WALL_LAYER = 0
+player = NodePath("CharacterBody2D2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(-410, 1)
+modulate = Color(1, 1, 1, 0.227451)
+position = Vector2(0, 3)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAACAAEAAAAAAAEAAAADAAAAAAAAAAEAAAAEAAEAAAAAAAEAAAAFAAAAAAAAAAEAAAAGAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAAHAAAAAAAAAAEAAAABAAIAAAAAAAEAAAAAAAMAAAAAAAEAAAACAAMAAAAAAAEAAAADAAIAAAAAAAEAAAAEAAMAAAAAAAEAAAAFAAIAAAAAAAEAAAAGAAMAAAAAAAEAAAAHAAIAAAAAAAEAAAAGAAUAAAAAAAEAAAAHAAQAAAAAAAEAAAAEAAUAAAAAAAEAAAAFAAQAAAAAAAEAAAACAAUAAAAAAAEAAAADAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAABAAQAAAAAAAEAAAAAAAcAAAAAAAEAAAABAAYAAAAAAAEAAAACAAcAAAAAAAEAAAADAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAFAAYAAAAAAAEAAAAGAAcAAAAAAAEAAAAHAAYAAAAAAAEAAAABAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAYAAAAAAAAAAAACAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAIAAAAAAAAAAAADAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAMAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAcAAAAAAAAAAAA=")
 tile_set = ExtResource("1_m75n5")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(208, 210)
+position = Vector2(849, 247)
 scale = Vector2(2.40058, 2.57742)
 collision_mask = 255
 script = ExtResource("2_g38e6")
@@ -33,3 +46,48 @@ texture = ExtResource("3_hmves")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_oukqi")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(36, 271)
+collision_layer = 0
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(1.84774e-06, 1.96695e-06)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_8k047")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+shape = SubResource("RectangleShape2D_eg0i2")
+
+[node name="enemy_YJS" type="CharacterBody2D" parent="." node_paths=PackedStringArray("player")]
+position = Vector2(29, 33)
+collision_layer = 0
+collision_mask = 0
+collision_priority = 2.0
+script = ExtResource("6_1fwim")
+top_right = Vector2i(7, 7)
+target_pos = Vector2i(2, 2)
+player = NodePath("../CharacterBody2D2")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy_YJS"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_hmves")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_YJS"]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_07qvv")
+
+[node name="Area2D" type="Area2D" parent="enemy_YJS"]
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy_YJS/Area2D"]
+modulate = Color(0.980392, 0, 0.380392, 0.490196)
+z_index = -1
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_ho22b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_YJS/Area2D"]
+position = Vector2(9.09495e-13, -1.07288e-06)
+scale = Vector2(9.07, 9.07)
+shape = SubResource("RectangleShape2D_iqdda")

@@ -44,15 +44,26 @@ func _ready():
 		int(player_global_pos.x / TILE_SIZE),
 		int(player_global_pos.y / TILE_SIZE)
 	)
+	
+	print("Target Node:", target_pos.x, target_pos.y)
+
+	# 초기 경로 탐색
 	pathfinding()
 
 func _process(delta):
-	# 플레이어의 글로벌 위치를 가져와 격자 좌표로 변환
-	var player_global_pos = player.global_position
-	target_pos = Vector2i(
-		int(player_global_pos.x / TILE_SIZE),
-		int(player_global_pos.y / TILE_SIZE)
-	)
+	# 스페이스바 입력 처리
+	if Input.is_action_just_pressed("ui_accept"):  # 스페이스바 기본 바인딩 키
+		# 플레이어의 현재 위치를 기준으로 목표 지점 갱신
+		var player_global_pos = player.global_position
+		target_pos = Vector2i(
+			int(player_global_pos.x / TILE_SIZE),
+			int(player_global_pos.y / TILE_SIZE)
+		)
+		print("Target Node:", target_pos.x, target_pos.y)
+		# 경로 탐색
+		pathfinding()
+		# 다음 노드로 이동
+		move_to_next_node()
 
 func pathfinding():
 	size_x = top_right.x - bottom_left.x + 1
@@ -82,29 +93,30 @@ func pathfinding():
 			new_node.initialize(is_wall, grid_position.x, grid_position.y)
 			row.append(new_node)
 		node_array.append(row)
-
+	
 	start_node = node_array[start_pos.x - bottom_left.x][start_pos.y - bottom_left.y]
 	target_node = node_array[target_pos.x - bottom_left.x][target_pos.y - bottom_left.y]
-
+	if target_node.is_wall:
+		print("Target is a wall. Pathfinding aborted.")
+		return
 	open_list = [start_node]
 	closed_list = []
 	final_node_list = []
-
+	
 	while open_list.size() > 0:
 		cur_node = open_list[0]
 		for node in open_list:
 			if node.f() < cur_node.f() or (node.f() == cur_node.f() and node.h < cur_node.h):
 				cur_node = node
-
+		
 		open_list.erase(cur_node)
 		closed_list.append(cur_node)
-
+		
 		if cur_node == target_node:
 			var temp_node = target_node
-			while temp_node != start_node:
+			while temp_node != null and temp_node != start_node:  # 시작 노드는 제외
 				final_node_list.append(temp_node)
 				temp_node = temp_node.parent_node
-			final_node_list.append(start_node)
 			final_node_list.reverse()
 			print("Path coordinates:")
 			for node in final_node_list:
@@ -112,6 +124,7 @@ func pathfinding():
 			
 			return
 		add_neighbors(cur_node)
+
 
 func add_neighbors(current_node: PathFindingNode):
 	var directions = [
@@ -138,12 +151,12 @@ func add_neighbors(current_node: PathFindingNode):
 				neighbor.parent_node = current_node
 				open_list.append(neighbor)
 
-func _draw():
-	# 원의 색상 및 반지름 설정
-	var circle_color = Color.RED  # 원 색상 (빨간색)
-	var circle_radius = TILE_SIZE / 4  # 타일 크기에 맞는 반지름
-
-	# 경로의 각 노드 위치에 원 그리기
-	for node in final_node_list:
-		var position = Vector2(node.x, node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
-		draw_circle(position, circle_radius, circle_color)
+func move_to_next_node():
+	# 경로가 비어 있으면 아무것도 하지 않음
+	if final_node_list.size() <= 1:
+		return
+	# 다음 노드로 이동
+	var next_node = final_node_list.pop_front()
+	start_pos = Vector2i(next_node.x, next_node.y)
+	var world_position = Vector2(next_node.x, next_node.y) * TILE_SIZE
+	position = world_position + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
