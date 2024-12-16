@@ -104,6 +104,7 @@ func _on_area_entered(area: Area2D) -> void:
 			set_physics_process(true)
 			
 func _on_body_entered(body: Node2D) -> void:
+<<<<<<< Updated upstream
 	if body.name == "CloseEnemy":
 		print("몹 건드림")
 		if body.has_method("damage"): # damage 메서드가 있는지 확인
@@ -114,6 +115,19 @@ func _on_body_entered(body: Node2D) -> void:
 		print("네크로 건드림")
 	elif body.name == "Boss":
 		print("보스 건드림")
+=======
+	if !isOnCollider:
+		isOnCollider = true
+		set_physics_process(false)
+		if body.name == "CloseEnemy":
+			print("몹 건드림")
+			set_physics_process(true)
+
+func _on_body_exited(body: Node2D) -> void:
+	print("탈출")
+	isOnCollider = false		
+
+>>>>>>> Stashed changes
 
 func _on_area_exited(area: Area2D) -> void:
 	print("탈출")

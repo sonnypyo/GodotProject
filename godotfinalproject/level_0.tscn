@@ -261,7 +261,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgf2y"]
-size = Vector2(40, 60)
+size = Vector2(40, 25.1133)
 
 [node name="Level_0" type="Node2D"]
 
@@ -285,7 +285,7 @@ sprite_frames = SubResource("SpriteFrames_cp6hw")
 animation = &"sick"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy3/CloseEnemy"]
-position = Vector2(34, 15)
+position = Vector2(34, 32.4433)
 shape = SubResource("RectangleShape2D_vgf2y")
 
 [node name="CloseEnemy2" type="Node2D" parent="."]
@@ -300,7 +300,7 @@ sprite_frames = SubResource("SpriteFrames_cp6hw")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy2/CloseEnemy"]
-position = Vector2(34, 15)
+position = Vector2(35.5389, 28.7816)
 shape = SubResource("RectangleShape2D_vgf2y")
 
 [node name="CloseEnemy" type="Node2D" parent="."]
@@ -315,7 +315,11 @@ sprite_frames = SubResource("SpriteFrames_cp6hw")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloseEnemy/CloseEnemy"]
+<<<<<<< Updated upstream
 position = Vector2(33.9324, 14.8862)
+=======
+position = Vector2(35.2128, 32.3614)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_vgf2y")
 
 [node name="HeartsBar" parent="." instance=ExtResource("4_p3ujq")]
