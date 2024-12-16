@@ -8,12 +8,14 @@ texture_region_size = Vector2i(60, 60)
 0:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
+1:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_r2brh"]
 tile_size = Vector2i(60, 60)
 sources/0 = SubResource("TileSetAtlasSource_27pbu")
 
 [node name="TileMap2" type="TileMap"]
+scale = Vector2(0.835, 0.835)
 tile_set = SubResource("TileSet_r2brh")
 format = 2
 layer_0/z_index = -1

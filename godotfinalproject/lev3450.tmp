@@ -442,7 +442,7 @@ texture = ExtResource("1_3gyau")
 [node name="Enemys" type="Node2D" parent="."]
 
 [node name="RangedEnemy2" type="Node2D" parent="Enemys"]
-position = Vector2(-83, -355)
+position = Vector2(-91, -252)
 scale = Vector2(1.21096, 1.21096)
 
 [node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy2"]
@@ -496,60 +496,49 @@ sprite_frames = SubResource("SpriteFrames_sivgn")
 animation = &"Idel"
 
 [node name="CloseEnemy3" type="Node2D" parent="Enemys"]
-position = Vector2(-78, -176)
+position = Vector2(-66, -180)
 scale = Vector2(1.21707, 1.21707)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy3"]
-position = Vector2(38.6173, 20.5411)
 script = ExtResource("6_sdg2r")
-bottom_left = Vector2i(-4, -4)
-top_right = Vector2i(3, 3)
-start_pos = Vector2i(1, 3)
+start_pos = Vector2i(-4, -4)
+target_pos = Vector2i(3, 3)
+player_path = NodePath("../../../PlayerReflectionTest")
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy3/CloseEnemy"]
-position = Vector2(-36.974, -22.1844)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy3/CloseEnemy"]
-position = Vector2(0, -3.8147e-06)
+position = Vector2(34, 24.5915)
 shape = SubResource("RectangleShape2D_7gxus")
 
 [node name="CloseEnemy2" type="Node2D" parent="Enemys"]
-position = Vector2(51, -168)
+position = Vector2(56, -179)
 scale = Vector2(1.10321, 1.10321)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy2"]
-position = Vector2(142.312, 13.5967)
 script = ExtResource("6_sdg2r")
-bottom_left = Vector2i(-4, -4)
-top_right = Vector2i(3, 3)
-start_pos = Vector2i(5, 1)
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
-position = Vector2(-34.4449, -19.0354)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
-position = Vector2(0, -3.8147e-06)
+position = Vector2(34, 24.5915)
 shape = SubResource("RectangleShape2D_7gxus")
 
 [node name="CloseEnemy" type="Node2D" parent="Enemys"]
-position = Vector2(-193, -170)
+position = Vector2(-188, -181)
 scale = Vector2(1.1953, 1.1953)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy"]
-position = Vector2(36.8108, 15.059)
 script = ExtResource("6_sdg2r")
-bottom_left = Vector2i(-3, -3)
-top_right = Vector2i(3, 3)
-start_pos = Vector2i(1, 1)
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy/CloseEnemy"]
-position = Vector2(-35.9742, -20.0786)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy/CloseEnemy"]
+position = Vector2(34, 24.5915)
 shape = SubResource("RectangleShape2D_7gxus")
