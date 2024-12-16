@@ -103,7 +103,18 @@ func _on_area_entered(area: Area2D) -> void:
 			print("몹 건드림")
 			set_physics_process(true)
 			
-			
+func _on_body_entered(body: Node2D) -> void:
+	if !isOnCollider:
+		isOnCollider = true
+		set_physics_process(false)
+		if body.name == "몹":
+			print("몹 건드림")
+			set_physics_process(true)
+
+func _on_body_exited(body: Node2D) -> void:
+	print("탈출")
+	isOnCollider = false		
+
 
 func _on_area_exited(area: Area2D) -> void:
 	print("탈출")
