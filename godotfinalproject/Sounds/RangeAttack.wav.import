@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://sb2k0kxubuwo"
-path="res://.godot/imported/555420__tonsil5__zombie-hit-1.wav-50cadc8d862740e4e6b08789d6e218dd.sample"
+path="res://.godot/imported/RangeAttack.wav-a9da78144e14b667b73576be939d5707.sample"
 
 [deps]
 
-source_file="res://Sounds/555420__tonsil5__zombie-hit-1.wav"
-dest_files=["res://.godot/imported/555420__tonsil5__zombie-hit-1.wav-50cadc8d862740e4e6b08789d6e218dd.sample"]
+source_file="res://Sounds/RangeAttack.wav"
+dest_files=["res://.godot/imported/RangeAttack.wav-a9da78144e14b667b73576be939d5707.sample"]
 
 [params]
 

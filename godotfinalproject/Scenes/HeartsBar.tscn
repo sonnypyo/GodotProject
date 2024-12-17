@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://f73260dclatg"]
+[gd_scene load_steps=5 format=3 uid="uid://f73260dclatg"]
 
 [ext_resource type="Script" path="res://Scripts/hearts_bar.gd" id="1_y2lyl"]
 [ext_resource type="Texture2D" uid="uid://iudaiehwiwak" path="res://Images/hudHeart_full.png" id="2_hnush"]
+[ext_resource type="AudioStream" uid="uid://cawtrel7y46y3" path="res://Sounds/Sick.wav" id="3_xxvy5"]
+[ext_resource type="AudioStream" uid="uid://d1lmocyupfhn0" path="res://Sounds/DeadSound.wav" id="4_kpfwc"]
 
 [node name="HeartsBar" type="HBoxContainer"]
 script = ExtResource("1_y2lyl")
@@ -17,3 +19,10 @@ texture = ExtResource("2_hnush")
 [node name="Heart3" type="TextureRect" parent="."]
 layout_mode = 2
 texture = ExtResource("2_hnush")
+
+[node name="Sick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xxvy5")
+
+[node name="Dead" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kpfwc")
+bus = &"Dead"

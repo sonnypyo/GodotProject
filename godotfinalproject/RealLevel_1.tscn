@@ -1,6 +1,8 @@
-[gd_scene load_steps=75 format=3 uid="uid://ciuiy57ppdy8k"]
+[gd_scene load_steps=80 format=3 uid="uid://ciuiy57ppdy8k"]
 
 [ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="1_8whfg"]
+[ext_resource type="Script" path="res://real_level_1.gd" id="1_jliqw"]
+[ext_resource type="AudioStream" uid="uid://blnbgrdvxklw8" path="res://Sounds/BackGound.mp3" id="1_ww7au"]
 [ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="2_abn4t"]
 [ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="3_fcqgm"]
 [ext_resource type="Script" path="res://Scenes/close_enemy.gd" id="4_5vosp"]
@@ -9,8 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://fw802o5lwx55" path="res://Sprites/Death.png" id="7_pd0l4"]
 [ext_resource type="Texture2D" uid="uid://bh4pknlqpcvl8" path="res://Sprites/Attack2.png" id="8_2myhr"]
 [ext_resource type="Texture2D" uid="uid://yf2kx8ywyog7" path="res://Sprites/Idle.png" id="9_4w0j8"]
+[ext_resource type="AudioStream" uid="uid://cj8qv7vdraaa3" path="res://Sounds/RangeDead.wav" id="10_emh3l"]
 [ext_resource type="Texture2D" uid="uid://do4xmxjia60v2" path="res://Sprites/Take hit.png" id="10_v5sa3"]
 [ext_resource type="Texture2D" uid="uid://y5phbxiiwsrc" path="res://Images/TheRed.png" id="11_873vd"]
+[ext_resource type="AudioStream" uid="uid://sb2k0kxubuwo" path="res://Sounds/RangeAttack.wav" id="11_tbpkv"]
+[ext_resource type="AudioStream" uid="uid://rc5csanhfs2" path="res://Sounds/CloseDead.wav" id="12_4a7y0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4iw6h"]
 size = Vector2(20, 56)
@@ -479,6 +484,13 @@ size = Vector2(40, 40.817)
 
 [node name="Level_2" type="Node2D"]
 position = Vector2(240, 240)
+script = ExtResource("1_jliqw")
+
+[node name="BackGound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ww7au")
+autoplay = true
+bus = &"BGM"
+parameters/looping = false
 
 [node name="HeartsBar" parent="." instance=ExtResource("1_8whfg")]
 offset_left = -574.0
@@ -540,6 +552,12 @@ position = Vector2(0, 11.0798)
 scale = Vector2(0.458319, 0.803025)
 texture = ExtResource("11_873vd")
 
+[node name="RangeSound" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy2"]
+stream = ExtResource("10_emh3l")
+
+[node name="RangeAttack" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy2"]
+stream = ExtResource("11_tbpkv")
+
 [node name="CloseEnemy3" type="Node2D" parent="Enemys"]
 position = Vector2(-13, -189)
 scale = Vector2(1.21707, 1.21707)
@@ -572,6 +590,9 @@ position = Vector2(2.90457, 5.80913)
 scale = Vector2(0.5745, 0.57066)
 texture = ExtResource("11_873vd")
 
+[node name="CloseDead" type="AudioStreamPlayer2D" parent="Enemys/CloseEnemy3"]
+stream = ExtResource("12_4a7y0")
+
 [node name="CloseEnemy2" type="Node2D" parent="Enemys"]
 position = Vector2(179, -236)
 scale = Vector2(1.10321, 1.10321)
@@ -603,6 +624,9 @@ modulate = Color(1, 1, 1, 0.639216)
 position = Vector2(2.90457, 5.80913)
 scale = Vector2(0.5745, 0.57066)
 texture = ExtResource("11_873vd")
+
+[node name="CloseDead" type="AudioStreamPlayer2D" parent="Enemys/CloseEnemy2"]
+stream = ExtResource("12_4a7y0")
 
 [node name="RangedEnemy" type="Node2D" parent="Enemys"]
 position = Vector2(-208, -246)
@@ -645,3 +669,9 @@ modulate = Color(1, 1, 1, 0.639216)
 position = Vector2(0, 11.0798)
 scale = Vector2(0.458319, 0.803025)
 texture = ExtResource("11_873vd")
+
+[node name="RangeSound" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy"]
+stream = ExtResource("10_emh3l")
+
+[node name="RangeAttack" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy"]
+stream = ExtResource("11_tbpkv")

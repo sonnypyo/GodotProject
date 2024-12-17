@@ -1,5 +1,6 @@
 extends Area2D
 #by 민성
+@onready var shootSound = $"../Shoot"
 # 속도를 저장할 변수
 @export var LineDrawScene: PackedScene
 var mapSizeX = 4
@@ -43,6 +44,7 @@ func _physics_process(delta):
 		elif true:
 			global_position.y = (vec.y+0.5)*60
 		transformlist.append(global_position)
+		
 		
 		
 	
@@ -122,12 +124,35 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	print("탈출")
+	shootSound.play()
 	isOnCollider = false		
 
+func trigger_space_event():
+	# Space 키 '눌림' 이벤트 생성
+	var space_pressed = InputEventKey.new()
+	space_pressed.keycode = KEY_SPACE
+	space_pressed.pressed = true
+	Input.parse_input_event(space_pressed)  # 눌림 이벤트 전달
+	print("SPACE key pressed!")
+
+	# 짧은 시간 뒤에 '뗌' 이벤트 생성
+	await get_tree().create_timer(0.1).timeout  # 0.1초 딜레이
+	var space_released = InputEventKey.new()
+	space_released.keycode = KEY_SPACE
+	space_released.pressed = false
+	Input.parse_input_event(space_released)  # 뗌 이벤트 전달
+	print("SPACE key released!")
+	GameCount=0
 
 
+var GameCount = 0
 func _on_area_exited(area: Area2D) -> void:
 	print("탈출")
+	GameCount+=1
+	if(GameCount>=5):
+		trigger_space_event()
+		
+	shootSound.play()
 	isOnCollider = false			
 
 # 특정 좌표가 어떤 타일에 있는지 계산하는 함수

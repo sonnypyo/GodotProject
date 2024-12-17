@@ -2,6 +2,7 @@ extends CharacterBody2D
 #손준표
 @onready var CloseEnemySprite2D = $CloseEnemySprit2D
 @onready var CloseRange = $Area2D
+@onready var CloseDead = $"../CloseDead"
 const TILE_SIZE = 60  # TileMap의 타일 크기
 
 class PathFindingNode:
@@ -70,6 +71,7 @@ func _ready():
 	)
 	print("Start Node:", start_pos.x, start_pos.y)
 	print("Target Node:", target_pos.x, target_pos.y)
+	
 
 	# 초기 경로 탐색
 	pathfinding()
@@ -86,6 +88,7 @@ func _process(delta):
 	# 스페이스바 입력 처리
 	if (CloseHP <= 0):
 		CloseEnemySprite2D.play("Dead")
+		CloseDead.play()
 		await get_tree().create_timer(1.0).timeout
 		queue_free()
 		print("죽음")
@@ -104,6 +107,11 @@ func _process(delta):
 		var next_node = final_node_list.front()
 		var next_pos = Vector2i(next_node.x, next_node.y)
 		if next_pos == target_pos:
+			CloseEnemySprite2D.play("Hit")
+			await get_tree().create_timer(1.0).timeout
+			CloseEnemySprite2D.play("Idel")
+			Globals.health_ui.decrease_health(1)
+			
 			print("Next node is target. Dealing damage.")
 			# 여기 공격겨겨격겨겨겨겨겨겨격겨겨격겨겨격겨겨격겨겨겨격겨겨겨격겨겨겨겨ㅕㄱ
 			apply_damage_to_target()
@@ -255,14 +263,14 @@ func apply_damage_to_target():
 	query.transform = Transform2D(0, world_position)
 	query.collide_with_areas = true
 
-	var results = get_world_2d().direct_space_state.intersect_shape(query)
+	#var results = get_world_2d().direct_space_state.intersect_shape(query)
 	
 	# 결과에서 "ball" 그룹에 속한 노드에 데미지 적용
-	for result in results:
-		if result.collider.is_in_group("ball"):
-			if result.collider.has_method("PlayerDamage"):				
-				result.collider.PlayerDamage()
-				print("Damage applied to target at: ", target_pos)
+	#for result in results:
+	#	if result.collider.is_in_group("ball"):
+	#		if result.collider.has_method("PlayerDamage"):				
+	#			result.collider.PlayerDamage()
+	#			print("Damage applied to target at: ", target_pos)
 	
-	await get_tree().create_timer(2.0).timeout
-	CloseRange.visible = false
+	#await get_tree().create_timer(2.0).timeout
+	#CloseRange.visible = false

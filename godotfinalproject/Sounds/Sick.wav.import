@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://rc5csanhfs2"
-path="res://.godot/imported/CloseDead.wav-e14c8c21772d6cc0b301ceb03a40a936.sample"
+uid="uid://cawtrel7y46y3"
+path="res://.godot/imported/Sick.wav-a3774436e4bceb3c19f88ba98f04e0be.sample"
 
 [deps]
 
-source_file="res://Sounds/CloseDead.wav"
-dest_files=["res://.godot/imported/CloseDead.wav-e14c8c21772d6cc0b301ceb03a40a936.sample"]
+source_file="res://Sounds/Sick.wav"
+dest_files=["res://.godot/imported/Sick.wav-a3774436e4bceb3c19f88ba98f04e0be.sample"]
 
 [params]
 

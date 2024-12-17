@@ -17,8 +17,18 @@ func _process(delta: float) -> void:
 		animated_sprite.play("Hurt")
 	elif Input.is_action_pressed("ui_down"): # 사망 상태일 때 Dead 애니메이션 실행
 		animated_sprite.play("Dead")
-	else:
-		animated_sprite.play("Idel")  # 아무 입력이 없으면 기본 애니메이션 실행
+	
+
+func PlayerHurt():
+	print("PlayerAnimaition Hurt")
+	animated_sprite.play("Hurt")
+	await get_tree().create_timer(1.0).timeout
+	animated_sprite.play("Idel")
+	
+func PlaerDead():
+	animated_sprite.play("Dead")
+	
+
 
 # 사망 상태 확인 함수
 func is_dead() -> bool:
