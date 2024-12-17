@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="1_v2fp2"]
 [ext_resource type="Texture2D" uid="uid://bh4pknlqpcvl8" path="res://Sprites/Attack2.png" id="2_1wqcm"]
 [ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="2_6n5wr"]
-[ext_resource type="Script" path="res://range_enemy.gd" id="2_y54lv"]
 [ext_resource type="Texture2D" uid="uid://fw802o5lwx55" path="res://Sprites/Death.png" id="3_s7hni"]
+[ext_resource type="Script" path="res://range_enemyYjs.gd" id="4_hsryd"]
 [ext_resource type="Texture2D" uid="uid://yf2kx8ywyog7" path="res://Sprites/Idle.png" id="4_m2njl"]
-[ext_resource type="Script" path="res://Scenes/close_enemy.gd" id="6_sdg2r"]
 [ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="7_4m5xu"]
+[ext_resource type="Script" path="res://Scenes/close_enemyYJS.gd" id="9_vp87c"]
 [ext_resource type="Texture2D" uid="uid://cam0l0kfnabo" path="res://Images/33428_28968_050.png" id="10_oy2yi"]
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://Images/icon.svg" id="11_ul7vp"]
 
@@ -455,8 +455,9 @@ position = Vector2(0.825786, -0.825799)
 scale = Vector2(1.13691, 1.13691)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("2_y54lv")
+script = ExtResource("4_hsryd")
 top_right = Vector2i(7, 7)
+WALL_LAYER = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
 position = Vector2(0, -1.97963)
@@ -501,7 +502,7 @@ position = Vector2(3.84487, -1.53794)
 scale = Vector2(1.13691, 1.13691)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("2_y54lv")
+script = ExtResource("4_hsryd")
 top_right = Vector2i(7, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy/RangeEnemy"]
@@ -547,7 +548,7 @@ scale = Vector2(1.21707, 1.21707)
 position = Vector2(259.64, 240.742)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("6_sdg2r")
+script = ExtResource("9_vp87c")
 top_right = Vector2i(7, 7)
 start_pos = Vector2i(1, 3)
 WALL_LAYER = 1
@@ -578,7 +579,7 @@ scale = Vector2(1.10321, 1.10321)
 position = Vector2(357.14, 232.05)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("6_sdg2r")
+script = ExtResource("9_vp87c")
 top_right = Vector2i(7, 7)
 start_pos = Vector2i(5, 1)
 
@@ -608,7 +609,7 @@ scale = Vector2(1.1953, 1.1953)
 position = Vector2(238.434, 211.662)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("6_sdg2r")
+script = ExtResource("9_vp87c")
 top_right = Vector2i(7, 7)
 start_pos = Vector2i(1, 1)
 
