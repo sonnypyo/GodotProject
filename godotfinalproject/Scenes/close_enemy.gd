@@ -1,6 +1,7 @@
 extends CharacterBody2D
 #손준표
 @onready var CloseEnemySprite2D = $CloseEnemySprit2D
+@onready var CloseRange = $Area2D
 const TILE_SIZE = 60  # TileMap의 타일 크기
 
 class PathFindingNode:
@@ -46,6 +47,7 @@ var target_world_position: Vector2 = Vector2.ZERO  # 목표 세계 좌표
 func _ready():
 	
 	# 기본 애니메이션 실행
+	CloseRange.visible = false
 	CloseEnemySprite2D.play("Idel")  # Idel 애니메이션 실행
 	player = Globals.player
 	
@@ -75,11 +77,14 @@ func damage():
 		
 	elif(CloseHP == 0):
 		print("죽음")
+		
+
 	
 func _process(delta):
 	# 스페이스바 입력 처리
 	if Input.is_action_just_pressed("ui_accept"):  # 스페이스바 기본 바인딩 키
 		# 플레이어의 현재 위치를 기준으로 목표 지점 갱신
+		CloseRange.visible = true
 		var player_global_pos = player.global_position
 		target_pos = Vector2i(
 			int(player_global_pos.x / TILE_SIZE),
@@ -92,9 +97,11 @@ func _process(delta):
 		var next_pos = Vector2i(next_node.x, next_node.y)
 		if next_pos == target_pos:
 			print("Next node is target. Dealing damage.")
+			# 여기 공격겨겨격겨겨겨겨겨겨격겨겨격겨겨격겨겨격겨겨겨격겨겨겨격겨겨겨겨ㅕㄱ
 			apply_damage_to_target()
 		# 다음 노드로 이동
-		move_to_next_node()
+		else :
+			move_to_next_node()
 		
 func _physics_process(delta):
 	# 목표 지점으로 천천히 이동
@@ -130,8 +137,11 @@ func pathfinding():
 			query.transform = Transform2D(0, world_position)
 
 			var colliders = get_world_2d().direct_space_state.intersect_shape(query)
+			
 			for col in colliders:
+				
 				if col.collider.collision_layer & (1 << WALL_LAYER) != 0:
+				
 					is_wall = true
 
 			var new_node = PathFindingNode.new()
@@ -220,6 +230,8 @@ func move_to_next_node():
 	target_world_position = Vector2(next_node.x, next_node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
 
 	print("Moving towards: (", start_pos.x, ", ", start_pos.y, ")")
+	await get_tree().create_timer(2.0).timeout
+	CloseRange.visible = false
 
 func apply_damage_to_target():
 	# Physics 검사로 해당 타일에 있는 Area2D 확인
@@ -241,24 +253,6 @@ func apply_damage_to_target():
 			if result.collider.has_method("damage"):
 				result.collider.damage()
 				print("Damage applied to target at: ", target_pos)
-
-func _draw():
-	for row in node_array:
-		for node in row:
-			var position = Vector2(node.x, node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
-			if node.is_wall:
-				draw_rect(Rect2(position - Vector2(TILE_SIZE / 2, TILE_SIZE / 2), Vector2(TILE_SIZE, TILE_SIZE)), Color.BLACK)
-			elif open_list.has(node):
-				draw_circle(position, TILE_SIZE / 4, Color.GREEN)
-			elif closed_list.has(node):
-				draw_circle(position, TILE_SIZE / 4, Color.BLUE)
-
-
-	# 원의 색상 및 반지름 설정
-	var circle_color = Color.RED  # 원 색상 (빨간색)
-	var circle_radius = TILE_SIZE / 4  # 타일 크기에 맞는 반지름
-
-	# 경로의 각 노드 위치에 원 그리기
-	for node in final_node_list:
-		var position = Vector2(node.x, node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
-		draw_circle(position, circle_radius, circle_color)
+	
+	await get_tree().create_timer(2.0).timeout
+	CloseRange.visible = false

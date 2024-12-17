@@ -8,6 +8,7 @@
 radius = 5.0
 
 [node name="ball" type="Area2D"]
+collision_mask = 9
 script = ExtResource("1_qsdek")
 
 [node name="PlayerAnim" parent="." instance=ExtResource("2_hjjfp")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://ig72wy12g7bf"]
+[gd_scene load_steps=71 format=3 uid="uid://ig72wy12g7bf"]
 
 [ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="1_3gyau"]
 [ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="1_v2fp2"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://yh1ae8rg54fh" path="res://Images/icon.svg" id="11_ul7vp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tnnd"]
-size = Vector2(20, 56)
+size = Vector2(20, 27.9273)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mrshq"]
 atlas = ExtResource("2_1wqcm")
@@ -424,22 +424,20 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gxus"]
 size = Vector2(40, 40.817)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctk55"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k46oa"]
 
 [node name="Level_2" type="Node2D"]
 
 [node name="HeartsBar" parent="." instance=ExtResource("2_6n5wr")]
-offset_left = -574.0
-offset_top = -322.0
-offset_right = -182.0
-offset_bottom = -194.0
+offset_left = -325.0
+offset_top = -74.0
+offset_right = 67.0
+offset_bottom = 54.0
 scale = Vector2(0.416884, 0.416884)
 
 [node name="Dsf" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(2, 3)
+position = Vector2(198, 235)
 scale = Vector2(2.91223, 2.91223)
 texture = ExtResource("1_3gyau")
 
@@ -449,70 +447,113 @@ position = Vector2(240, 240)
 [node name="Enemys" type="Node2D" parent="."]
 
 [node name="RangedEnemy2" type="Node2D" parent="Enemys"]
-position = Vector2(-83, -355)
+position = Vector2(90, 92)
 scale = Vector2(1.21096, 1.21096)
 
 [node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy2"]
-position = Vector2(3.84487, -1.53794)
+position = Vector2(0.825786, -0.825799)
 scale = Vector2(1.13691, 1.13691)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("2_y54lv")
+top_right = Vector2i(7, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
-position = Vector2(0, 13)
+position = Vector2(0, -1.97963)
 shape = SubResource("RectangleShape2D_8tnnd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
 
 [node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
-position = Vector2(65, -18)
+z_index = 1
+position = Vector2(64.6449, -41.4018)
 sprite_frames = SubResource("SpriteFrames_kqxtg")
 
 [node name="DeadAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
-position = Vector2(-3, -15)
+z_index = 1
+position = Vector2(-2.90538, -23.9694)
 sprite_frames = SubResource("SpriteFrames_oqtr3")
 
 [node name="Id" type="AnimatedSprite2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(5.54159e-06, -23.9694)
 sprite_frames = SubResource("SpriteFrames_sivgn")
 animation = &"Idel"
 
+[node name="Area2D" type="Area2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.564706)
+scale = Vector2(0.27, 0.455)
+texture = ExtResource("10_oy2yi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.564706)
+scale = Vector2(0.46, 0.26)
+texture = ExtResource("10_oy2yi")
+
 [node name="RangedEnemy" type="Node2D" parent="Enemys"]
-position = Vector2(33, -250)
+position = Vector2(327, 79)
 scale = Vector2(1.30043, 1.30043)
 
 [node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy"]
 position = Vector2(3.84487, -1.53794)
 scale = Vector2(1.13691, 1.13691)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("2_y54lv")
+top_right = Vector2i(7, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy/RangeEnemy"]
-position = Vector2(0, 13)
+position = Vector2(0, -1.59298)
 shape = SubResource("RectangleShape2D_8tnnd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.676374, -7.44013)
 
 [node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy/RangeEnemy"]
-position = Vector2(65, -18)
+z_index = 1
+position = Vector2(64.9319, -37.2006)
 sprite_frames = SubResource("SpriteFrames_kqxtg")
 
 [node name="DeadAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy/RangeEnemy"]
-position = Vector2(-3, -15)
+z_index = 1
+position = Vector2(-2.70549, -22.3204)
 sprite_frames = SubResource("SpriteFrames_oqtr3")
 
 [node name="Id" type="AnimatedSprite2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+position = Vector2(0.676384, -48.699)
 sprite_frames = SubResource("SpriteFrames_sivgn")
 animation = &"Idel"
+
+[node name="Area2D" type="Area2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.564706)
+scale = Vector2(0.27, 0.455)
+texture = ExtResource("10_oy2yi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.564706)
+scale = Vector2(0.46, 0.26)
+texture = ExtResource("10_oy2yi")
 
 [node name="CloseEnemy3" type="Node2D" parent="Enemys"]
 position = Vector2(-105, -264)
 scale = Vector2(1.21707, 1.21707)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy3"]
-position = Vector2(259.64, 242.385)
+position = Vector2(259.64, 240.742)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("6_sdg2r")
 top_right = Vector2i(7, 7)
 start_pos = Vector2i(1, 3)
+WALL_LAYER = 1
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy3/CloseEnemy"]
+z_index = 1
 position = Vector2(-36.974, -22.1844)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
@@ -526,24 +567,23 @@ collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemys/CloseEnemy3/CloseEnemy/Area2D"]
 modulate = Color(1, 1, 1, 0.564706)
-scale = Vector2(0.32, 0.32)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("10_oy2yi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy3/CloseEnemy/Area2D"]
-scale = Vector2(7.06, 7.06)
-shape = SubResource("RectangleShape2D_ctk55")
-
 [node name="CloseEnemy2" type="Node2D" parent="Enemys"]
-position = Vector2(57, -168)
+position = Vector2(58, -165)
 scale = Vector2(1.10321, 1.10321)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy2"]
 position = Vector2(357.14, 232.05)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("6_sdg2r")
 top_right = Vector2i(7, 7)
 start_pos = Vector2i(5, 1)
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
+z_index = 1
 position = Vector2(-34.4449, -19.0354)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
@@ -552,18 +592,28 @@ animation = &"Hit"
 position = Vector2(0, -3.8147e-06)
 shape = SubResource("RectangleShape2D_7gxus")
 
+[node name="Area2D" type="Area2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/CloseEnemy2/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.564706)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_oy2yi")
+
 [node name="CloseEnemy" type="Node2D" parent="Enemys"]
 position = Vector2(-254, 73)
 scale = Vector2(1.1953, 1.1953)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy"]
 position = Vector2(238.434, 211.662)
-collision_mask = 4
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("6_sdg2r")
 top_right = Vector2i(7, 7)
 start_pos = Vector2i(1, 1)
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy/CloseEnemy"]
+z_index = 1
 position = Vector2(-36.8108, -15.8956)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
@@ -571,11 +621,20 @@ animation = &"Hit"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy/CloseEnemy"]
 shape = SubResource("RectangleShape2D_7gxus")
 
+[node name="Area2D" type="Area2D" parent="Enemys/CloseEnemy/CloseEnemy"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/CloseEnemy/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.564706)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_oy2yi")
+
 [node name="EnemyManager" type="Node2D" parent="."]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(241, 127)
-collision_layer = 4
+collision_layer = 2
+collision_mask = 255
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(5.5, 5.5)
