@@ -609,5 +609,4 @@ script = ExtResource("1_ngba0")
 position = Vector2(12, -89)
 scale = Vector2(1.39062, 1.39062)
 sprite_frames = SubResource("SpriteFrames_eyy1r")
-animation = &"Idel"
-frame_progress = 0.789153
+animation = &"Hit"

@@ -5,6 +5,7 @@ extends Node2D
 func _ready():
 	# 기본 애니메이션 실행
 	animated_sprite.play("Idel")  # Idel 애니메이션 실행
+	Globals.player = self
 
 func _process(delta: float) -> void:
 	# 조건에 따라 애니메이션 변경

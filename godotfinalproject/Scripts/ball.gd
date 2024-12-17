@@ -109,8 +109,12 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.has_method("damage"): # damage 메서드가 있는지 확인
 			body.damage()
 	elif body.name == "RangeEnemy":
+		if body.has_method("RangeDamage"): # damage 메서드가 있는지 확인
+			body.RangeDamage()
 		print("원거리 건드림")
 	elif body.name == "Necromancer":
+		if body.has_method("NecromDamage"): # damage 메서드가 있는지 확인
+			body.NecromDamage()
 		print("네크로 건드림")
 	elif body.name == "Boss":
 		print("보스 건드림")

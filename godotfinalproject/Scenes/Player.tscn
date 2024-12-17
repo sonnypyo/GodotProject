@@ -8,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="ball" parent="." instance=ExtResource("1_n30rt")]
+position = Vector2(2, 126)
 
 [node name="LineDraw" type="Line2D" parent="."]
 scale = Vector2(2, 2)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cx7j43bhwb55q"]
 
 [ext_resource type="PackedScene" uid="uid://cag8qq8oi3h8r" path="res://Scenes/Player.tscn" id="1_8rdge"]
-[ext_resource type="PackedScene" uid="uid://cw7xx1oms72ja" path="res://Scenes/tile_mapTest.tscn" id="2_nt2jd"]
+[ext_resource type="PackedScene" uid="uid://b4srujk3e7p4h" path="res://tile_map_layer.tscn" id="1_byyxi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msu21"]
 size = Vector2(64, 2234.02)
@@ -11,7 +11,7 @@ size = Vector2(3956, 30)
 
 [node name="PlayerReflectionTest" type="Node2D"]
 
-[node name="TileMap" parent="." instance=ExtResource("2_nt2jd")]
+[node name="TileMapLayer" parent="." instance=ExtResource("1_byyxi")]
 
 [node name="wallX" type="Area2D" parent="."]
 
