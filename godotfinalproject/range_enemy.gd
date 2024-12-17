@@ -286,8 +286,8 @@ func apply_damage_to_target():
 	# 결과에서 "ball" 그룹에 속한 노드에 데미지 적용
 	for result in results:
 		if result.collider.is_in_group("ball"):
-			if result.collider.has_method("damage"):
-				result.collider.damage()
+			if result.collider.has_method("PlayerDamage"):
+				result.collider.PlayerDamage()
 				print("Damage applied to target at: ", target_pos)
 				
 	await get_tree().create_timer(2.0).timeout

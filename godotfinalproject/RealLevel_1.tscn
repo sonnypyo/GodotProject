@@ -502,7 +502,7 @@ position = Vector2(214, -251)
 scale = Vector2(1.29108, 1.29108)
 
 [node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy2"]
-position = Vector2(-47.2473, 28.6582)
+position = Vector2(-48.7964, 27.8836)
 floor_block_on_wall = false
 script = ExtResource("6_mj4ho")
 top_right = Vector2i(7, 7)
@@ -541,7 +541,7 @@ scale = Vector2(0.458319, 0.803025)
 texture = ExtResource("11_873vd")
 
 [node name="CloseEnemy3" type="Node2D" parent="Enemys"]
-position = Vector2(-133, -184)
+position = Vector2(-13, -189)
 scale = Vector2(1.21707, 1.21707)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy3"]
@@ -573,7 +573,7 @@ scale = Vector2(0.5745, 0.57066)
 texture = ExtResource("11_873vd")
 
 [node name="CloseEnemy2" type="Node2D" parent="Enemys"]
-position = Vector2(56, -179)
+position = Vector2(179, -236)
 scale = Vector2(1.10321, 1.10321)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy2"]

@@ -142,8 +142,10 @@ func get_tile_coordinates(XYposition: Vector2) -> Vector2:
 		tile_y = -floor(-XYposition.y / 60)
 	elif true:
 		tile_y = floor(XYposition.y / 60)
-	tile_x = clamp(tile_x, -mapSizeX, mapSizeX)
-	tile_y = clamp(tile_y, -mapSizeY, mapSizeY)#이탈방지
+	
 	print("%n",tile_x, tile_y)
 	
 	return Vector2(tile_x, tile_y)
+	
+func PlayerDamage():
+	print("데미지ㅁㄴㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ")

@@ -37,7 +37,7 @@ shape = SubResource("RectangleShape2D_ly0q7")
 limit_left = -9999998
 
 [node name="Player" parent="." instance=ExtResource("1_8rdge")]
-offset_left = 27.0
-offset_top = 21.0
-offset_right = 27.0
-offset_bottom = 21.0
+offset_left = 39.0
+offset_top = 214.0
+offset_right = 39.0
+offset_bottom = 214.0

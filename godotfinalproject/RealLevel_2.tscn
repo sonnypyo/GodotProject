@@ -1,146 +1,147 @@
-[gd_scene load_steps=74 format=3 uid="uid://dwt4daqokd5xt"]
+[gd_scene load_steps=75 format=3 uid="uid://bwcg1cxxsnydl"]
 
-[ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="1_3gyau"]
-[ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="1_v2fp2"]
-[ext_resource type="Texture2D" uid="uid://bh4pknlqpcvl8" path="res://Sprites/Attack2.png" id="2_1wqcm"]
-[ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="2_6n5wr"]
-[ext_resource type="Script" path="res://range_enemy.gd" id="2_y54lv"]
-[ext_resource type="Texture2D" uid="uid://fw802o5lwx55" path="res://Sprites/Death.png" id="3_s7hni"]
-[ext_resource type="Texture2D" uid="uid://yf2kx8ywyog7" path="res://Sprites/Idle.png" id="4_m2njl"]
-[ext_resource type="Texture2D" uid="uid://do4xmxjia60v2" path="res://Sprites/Take hit.png" id="6_pi0y3"]
-[ext_resource type="Script" path="res://Scenes/close_enemy.gd" id="6_sdg2r"]
-[ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="7_4m5xu"]
+[ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="1_5r7pb"]
+[ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="2_vyup4"]
+[ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="3_6aoki"]
+[ext_resource type="Script" path="res://range_enemy.gd" id="4_wus72"]
+[ext_resource type="Texture2D" uid="uid://fw802o5lwx55" path="res://Sprites/Death.png" id="5_b1wye"]
+[ext_resource type="Texture2D" uid="uid://bh4pknlqpcvl8" path="res://Sprites/Attack2.png" id="6_wqhot"]
+[ext_resource type="Texture2D" uid="uid://yf2kx8ywyog7" path="res://Sprites/Idle.png" id="7_bhva2"]
+[ext_resource type="Texture2D" uid="uid://do4xmxjia60v2" path="res://Sprites/Take hit.png" id="8_fv808"]
+[ext_resource type="Texture2D" uid="uid://y5phbxiiwsrc" path="res://Images/TheRed.png" id="9_ioa7k"]
+[ext_resource type="Script" path="res://Scenes/close_enemy.gd" id="10_u1uh7"]
+[ext_resource type="Texture2D" uid="uid://rlh7f37ne3ee" path="res://Sprites/Bringer-of-Death-SpritSheet.png" id="11_qtclh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cpggk"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(700, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oc715"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(840, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_beiro"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(980, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8uvv"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(0, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5e0f2"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(140, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ll0y5"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(280, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cibmj"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(420, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kw0wn"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(560, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7w21g"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(700, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8q5ck"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(840, 372, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3iwm"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(0, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ec406"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(140, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lc32q"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(280, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xi277"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(420, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mmv8"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(560, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnssv"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(700, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muf2p"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(840, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_502td"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(980, 186, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwigi"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(0, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxr7e"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(140, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ye81m"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(0, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m44gr"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(140, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6bog"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(280, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_db07y"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(420, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ct1ou"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(560, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lftcj"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(700, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btoxa"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(840, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j77np"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(980, 0, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0nq1"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(140, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_25kgp"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(280, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0bgd"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(420, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7nsx6"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(560, 279, 140, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pxjek"]
-atlas = ExtResource("7_4m5xu")
+atlas = ExtResource("11_qtclh")
 region = Rect2(700, 279, 140, 93)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r2mx3"]
@@ -272,107 +273,107 @@ size = Vector2(40, 40.817)
 size = Vector2(20, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eno3x"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(0, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nw5p8"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0alp"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(500, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1lvg"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(750, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjnr3"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(1000, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kxdc2"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(1250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vou1n"]
-atlas = ExtResource("3_s7hni")
+atlas = ExtResource("5_b1wye")
 region = Rect2(1500, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3wgk"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(0, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oipoo"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_buvud"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(500, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vp5u"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(750, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksyf5"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(1000, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_85nhb"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(1250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdbs7"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(1500, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lha0"]
-atlas = ExtResource("2_1wqcm")
+atlas = ExtResource("6_wqhot")
 region = Rect2(1750, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lg0x1"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(0, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4n47o"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdj32"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(500, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8i08b"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(750, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6a8ui"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(1000, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6kvol"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(1250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4doid"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(1500, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bce8n"]
-atlas = ExtResource("4_m2njl")
+atlas = ExtResource("7_bhva2")
 region = Rect2(1750, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5aah3"]
-atlas = ExtResource("6_pi0y3")
+atlas = ExtResource("8_fv808")
 region = Rect2(0, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ytuua"]
-atlas = ExtResource("6_pi0y3")
+atlas = ExtResource("8_fv808")
 region = Rect2(250, 0, 250, 250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ig3w0"]
-atlas = ExtResource("6_pi0y3")
+atlas = ExtResource("8_fv808")
 region = Rect2(500, 0, 250, 250)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_184vv"]
@@ -477,8 +478,9 @@ animations = [{
 }]
 
 [node name="Level_2" type="Node2D"]
+position = Vector2(240, 240)
 
-[node name="HeartsBar" parent="." instance=ExtResource("2_6n5wr")]
+[node name="HeartsBar" parent="." instance=ExtResource("1_5r7pb")]
 offset_left = -574.0
 offset_top = -322.0
 offset_right = -182.0
@@ -489,87 +491,233 @@ scale = Vector2(0.416884, 0.416884)
 z_index = -1
 position = Vector2(2, 3)
 scale = Vector2(2.91223, 2.91223)
-texture = ExtResource("1_3gyau")
+texture = ExtResource("2_vyup4")
 
-[node name="PlayerReflectionTest" parent="." instance=ExtResource("1_v2fp2")]
+[node name="PlayerReflectionTest" parent="." instance=ExtResource("3_6aoki")]
 
 [node name="Enemys" type="Node2D" parent="."]
 
+[node name="CloseEnemy4" type="Node2D" parent="Enemys"]
+position = Vector2(476, -245)
+scale = Vector2(1.10321, 1.10321)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy4"]
+position = Vector2(-242.021, 76.1414)
+script = ExtResource("10_u1uh7")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy4/CloseEnemy"]
+z_index = 1
+position = Vector2(-34.2413, -21.4834)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy4/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-0.241257, 3.10807)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys/CloseEnemy4/CloseEnemy"]
+position = Vector2(-0.702755, -1.54163)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/CloseEnemy4/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("9_ioa7k")
+
+[node name="RangedEnemy3" type="Node2D" parent="Enemys"]
+position = Vector2(54, -262)
+scale = Vector2(1.66689, 1.66689)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy3"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("4_wus72")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy3/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys/RangedEnemy3/RangeEnemy"]
+visible = false
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("9_ioa7k")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("9_ioa7k")
+
+[node name="RangedEnemy2" type="Node2D" parent="Enemys"]
+position = Vector2(214, -251)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy2"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("4_wus72")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys/RangedEnemy2/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("9_ioa7k")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("9_ioa7k")
+
 [node name="CloseEnemy3" type="Node2D" parent="Enemys"]
-position = Vector2(-66, -180)
+position = Vector2(-13, -189)
 scale = Vector2(1.21707, 1.21707)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy3"]
-script = ExtResource("6_sdg2r")
+position = Vector2(36.974, 23.8277)
+script = ExtResource("10_u1uh7")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy3/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Sick"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy3/CloseEnemy"]
-position = Vector2(34, 24.5915)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
 shape = SubResource("RectangleShape2D_7gxus")
 
+[node name="Area2D" type="Area2D" parent="Enemys/CloseEnemy3/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/CloseEnemy3/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("9_ioa7k")
+
 [node name="CloseEnemy2" type="Node2D" parent="Enemys"]
-position = Vector2(56, -179)
+position = Vector2(179, -236)
 scale = Vector2(1.10321, 1.10321)
 
 [node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy2"]
-script = ExtResource("6_sdg2r")
+position = Vector2(-242.021, 76.1414)
+script = ExtResource("10_u1uh7")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
 
 [node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
+z_index = 1
+position = Vector2(-34.2413, -21.4834)
 sprite_frames = SubResource("SpriteFrames_r2mx3")
 animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
-position = Vector2(34, 24.5915)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-0.241257, 3.10807)
 shape = SubResource("RectangleShape2D_7gxus")
 
-[node name="CloseEnemy" type="Node2D" parent="Enemys"]
-position = Vector2(-188, -181)
-scale = Vector2(1.1953, 1.1953)
+[node name="Area2D" type="Area2D" parent="Enemys/CloseEnemy2/CloseEnemy"]
+position = Vector2(-0.702755, -1.54163)
+scale = Vector2(0.624152, 0.624152)
 
-[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys/CloseEnemy"]
-script = ExtResource("6_sdg2r")
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/CloseEnemy2/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("9_ioa7k")
 
-[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys/CloseEnemy/CloseEnemy"]
-sprite_frames = SubResource("SpriteFrames_r2mx3")
-animation = &"Dead"
+[node name="RangedEnemy" type="Node2D" parent="Enemys"]
+position = Vector2(-208, -246)
+scale = Vector2(1.30143, 1.30143)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/CloseEnemy/CloseEnemy"]
-position = Vector2(34, 24.5915)
-shape = SubResource("RectangleShape2D_7gxus")
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys/RangedEnemy"]
+position = Vector2(-2.30516, 26.1251)
+script = ExtResource("4_wus72")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
 
-[node name="RangedEnemy" type="Node2D" parent="."]
-position = Vector2(-90, -242)
-
-[node name="RangeEnemy" type="CharacterBody2D" parent="RangedEnemy"]
-script = ExtResource("2_y54lv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RangedEnemy/RangeEnemy"]
-position = Vector2(0, 13)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0.289927, -5.76165)
 shape = SubResource("RectangleShape2D_4iw6h")
 
-[node name="Sprite2D" type="Sprite2D" parent="RangedEnemy/RangeEnemy"]
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(0.289927, -18.7617)
 
-[node name="HitAniSprite" type="AnimatedSprite2D" parent="RangedEnemy/RangeEnemy"]
-position = Vector2(1, -3)
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(1.28993, -21.7617)
 sprite_frames = SubResource("SpriteFrames_184vv")
 animation = &"Dead"
 
-[node name="RangedEnemy" type="Node2D" parent="RangedEnemy"]
-position = Vector2(120, 5)
+[node name="Area2D" type="Area2D" parent="Enemys/RangedEnemy/RangeEnemy"]
+position = Vector2(-1.24685, 0.448048)
+scale = Vector2(0.624152, 0.624152)
 
-[node name="RangeEnemy" type="CharacterBody2D" parent="RangedEnemy/RangedEnemy"]
-script = ExtResource("2_y54lv")
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("9_ioa7k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RangedEnemy/RangedEnemy/RangeEnemy"]
-position = Vector2(0, 13)
-shape = SubResource("RectangleShape2D_4iw6h")
-
-[node name="Sprite2D" type="Sprite2D" parent="RangedEnemy/RangedEnemy/RangeEnemy"]
-
-[node name="HitAniSprite" type="AnimatedSprite2D" parent="RangedEnemy/RangedEnemy/RangeEnemy"]
-position = Vector2(1, -3)
-sprite_frames = SubResource("SpriteFrames_184vv")
-animation = &"Dead"
+[node name="Sprite2D" type="Sprite2D" parent="Enemys/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("9_ioa7k")
