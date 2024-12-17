@@ -49,6 +49,12 @@ var target_world_position: Vector2 = Vector2.ZERO  # 목표 세계 좌표
 
 func _ready():
 	# 기본 애니메이션 실행 전, 모든 스프라이트를 끔
+	print("시작 노드 계산 디버깅:")
+	print("bottom_left:", bottom_left)
+	print("top_right:", top_right)
+	print("start_pos:", start_pos)
+	print("size_x:", size_x)
+	print("size_y:", size_y)
 	RangeIdel.play("Idel")  # Idel 애니메이션 실행행
 
 	rangerange.visible = false

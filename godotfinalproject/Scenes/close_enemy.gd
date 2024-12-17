@@ -45,7 +45,12 @@ var move_speed = 100  # 이동 속도 (픽셀/초)
 var target_world_position: Vector2 = Vector2.ZERO  # 목표 세계 좌표
 
 func _ready():
-	
+	print("시작 노드 계산 디버깅cc:")
+	print("bottom_left:", bottom_left)
+	print("top_right:", top_right)
+	print("start_pos:", start_pos)
+	print("size_x:", size_x)
+	print("size_y:", size_y)
 	# 기본 애니메이션 실행
 	CloseRange.visible = false
 	CloseEnemySprite2D.stop()
@@ -154,7 +159,11 @@ func pathfinding():
 			new_node.initialize(is_wall, grid_position.x, grid_position.y)
 			row.append(new_node)
 		node_array.append(row)
-	
+	print("여기다")
+	print(start_pos.x - bottom_left.x)
+	print(start_pos.y - bottom_left.y)
+	print(size_x)
+	print(size_y)
 	start_node = node_array[start_pos.x - bottom_left.x][start_pos.y - bottom_left.y]
 	target_node = node_array[target_pos.x - bottom_left.x][target_pos.y - bottom_left.y]
 	if target_node.is_wall:
