@@ -13,6 +13,8 @@ var max_turn = 5
 var lindDraw: Line2D
 var isRunning = false
 
+var Health = 50
+
 func _ready():
 	# 초기화 코드
 	transformlist.append(global_position)
@@ -143,3 +145,8 @@ func get_tile_coordinates(XYposition: Vector2) -> Vector2:
 	print("%n",tile_x, tile_y)
 	
 	return Vector2(tile_x, tile_y)
+	
+func damage():
+	print("Ball received damage!")
+	Health -= 10
+	# 여기에 데미지 처리 로직 추가

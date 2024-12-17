@@ -25,7 +25,7 @@ class PathFindingNode:
 @export var target_pos: Vector2i  # 목표 위치 (격자 좌표)
 @export var allow_diagonal: bool = true
 @export var dont_cross_corner: bool = true
-@export var WALL_LAYER: int = 1  # 충돌 레이어 ID 설정
+@export var WALL_LAYER: int = 3  # 충돌 레이어 ID 설정
 
 var size_x: int
 var size_y: int
@@ -40,6 +40,8 @@ var cur_node: PathFindingNode
 
 var CloseHP = 30
 var player: Node2D
+var move_speed = 100  # 이동 속도 (픽셀/초)
+var target_world_position: Vector2 = Vector2.ZERO  # 목표 세계 좌표
 
 func _ready():
 	
@@ -64,7 +66,6 @@ func _ready():
 	# 초기 경로 탐색
 	pathfinding()
 
-
 func damage():
 	if(CloseHP > 0):
 		CloseEnemySprite2D.play("sick")
@@ -87,9 +88,27 @@ func _process(delta):
 		print("Target Node:", target_pos.x, target_pos.y)
 		# 경로 탐색
 		pathfinding()
-		
+		var next_node = final_node_list.front()
+		var next_pos = Vector2i(next_node.x, next_node.y)
+		if next_pos == target_pos:
+			print("Next node is target. Dealing damage.")
+			apply_damage_to_target()
 		# 다음 노드로 이동
 		move_to_next_node()
+		
+func _physics_process(delta):
+	# 목표 지점으로 천천히 이동
+	if target_world_position != Vector2.ZERO:
+		var direction = (target_world_position - global_position).normalized()
+		velocity = direction * move_speed
+		
+		# 목표 위치에 거의 도달했으면 위치 고정
+		if global_position.distance_to(target_world_position) < 2.0:
+			global_position = target_world_position
+			velocity = Vector2.ZERO  # 속도 초기화
+			target_world_position = Vector2.ZERO  # 목표 초기화
+		
+		move_and_slide()
 
 func pathfinding():
 	size_x = top_right.x - bottom_left.x + 1
@@ -100,10 +119,7 @@ func pathfinding():
 		var row = []
 		for j in range(size_y):
 			var is_wall = false
-			var grid_position = Vector2(
-				i + bottom_left.x,
-				j + bottom_left.y
-			)
+			var grid_position = Vector2(i + bottom_left.x, j + bottom_left.y)
 
 			# 격자 중심을 기준으로 충돌 감지 (픽셀 좌표 변환 적용)
 			var world_position = grid_position * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
@@ -122,7 +138,7 @@ func pathfinding():
 			new_node.initialize(is_wall, grid_position.x, grid_position.y)
 			row.append(new_node)
 		node_array.append(row)
-
+	
 	start_node = node_array[start_pos.x - bottom_left.x][start_pos.y - bottom_left.y]
 	target_node = node_array[target_pos.x - bottom_left.x][target_pos.y - bottom_left.y]
 	if target_node.is_wall:
@@ -131,16 +147,16 @@ func pathfinding():
 	open_list = [start_node]
 	closed_list = []
 	final_node_list = []
-
+	
 	while open_list.size() > 0:
 		cur_node = open_list[0]
 		for node in open_list:
 			if node.f() < cur_node.f() or (node.f() == cur_node.f() and node.h < cur_node.h):
 				cur_node = node
-
+		
 		open_list.erase(cur_node)
 		closed_list.append(cur_node)
-
+		
 		if cur_node == target_node:
 			var temp_node = target_node
 			while temp_node != null and temp_node != start_node:  # 시작 노드는 제외
@@ -150,9 +166,10 @@ func pathfinding():
 			print("Path coordinates:")
 			for node in final_node_list:
 				print("(", node.x, ", ", node.y, ")")
-
+			
 			return
 		add_neighbors(cur_node)
+
 
 func add_neighbors(current_node: PathFindingNode):
 	var directions = [
@@ -167,7 +184,7 @@ func add_neighbors(current_node: PathFindingNode):
 		var neighbor_x = current_node.x + direction.x
 		var neighbor_y = current_node.y + direction.y
 
-		if neighbor_x >= bottom_left.x and neighbor_x <= top_right.x and neighbor_y >= bottom_left.y and neighbor_y <= top_right.y:
+		if neighbor_x >= bottom_left.x and neighbor_x < top_right.x + 1 and neighbor_y >= bottom_left.y and neighbor_y < top_right.y + 1:
 			var neighbor = node_array[neighbor_x - bottom_left.x][neighbor_y - bottom_left.y]
 			if neighbor.is_wall or closed_list.has(neighbor):
 				continue 
@@ -183,14 +200,49 @@ func move_to_next_node():
 	# 경로가 비어 있으면 아무것도 하지 않음
 	if final_node_list.size() <= 1:
 		return
-	# 다음 노드로 이동
+
+	# 다음 노드를 확인
 	var next_node = final_node_list.pop_front()
+	var next_pos = Vector2i(next_node.x, next_node.y)
+	
+	var next_set = final_node_list.front()
+	var next_xy = Vector2i(next_set.x, next_set.y)
+
+	# 바로 다음 노드가 목표 노드인지 확인
+	print(next_pos.x)
+	print(next_pos.y)
+	
+		
+
+	# 타겟이 아니면 다음 노드로 이동
+	final_node_list.pop_front()  # 다음 노드를 경로에서 제거
 	start_pos = Vector2i(next_node.x, next_node.y)
-	var world_position = Vector2(next_node.x, next_node.y) * TILE_SIZE
-	position = world_position + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
+	target_world_position = Vector2(next_node.x, next_node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
+
+	print("Moving towards: (", start_pos.x, ", ", start_pos.y, ")")
+
+func apply_damage_to_target():
+	# Physics 검사로 해당 타일에 있는 Area2D 확인
+	var world_position = target_pos * TILE_SIZE + Vector2i(TILE_SIZE / 2, TILE_SIZE / 2)
+
+	var query = PhysicsShapeQueryParameters2D.new()
+	var circle_shape = CircleShape2D.new()
+	circle_shape.radius = TILE_SIZE / 2
+
+	query.shape = circle_shape
+	query.transform = Transform2D(0, world_position)
+	query.collide_with_areas = true
+
+	var results = get_world_2d().direct_space_state.intersect_shape(query)
+	
+	# 결과에서 "ball" 그룹에 속한 노드에 데미지 적용
+	for result in results:
+		if result.collider.is_in_group("ball"):
+			if result.collider.has_method("damage"):
+				result.collider.damage()
+				print("Damage applied to target at: ", target_pos)
 
 func _draw():
-	"""
 	for row in node_array:
 		for node in row:
 			var position = Vector2(node.x, node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
@@ -200,7 +252,7 @@ func _draw():
 				draw_circle(position, TILE_SIZE / 4, Color.GREEN)
 			elif closed_list.has(node):
 				draw_circle(position, TILE_SIZE / 4, Color.BLUE)
-	"""
+
 
 	# 원의 색상 및 반지름 설정
 	var circle_color = Color.RED  # 원 색상 (빨간색)
@@ -210,4 +262,3 @@ func _draw():
 	for node in final_node_list:
 		var position = Vector2(node.x, node.y) * TILE_SIZE + Vector2(TILE_SIZE / 2, TILE_SIZE / 2)
 		draw_circle(position, circle_radius, circle_color)
-		

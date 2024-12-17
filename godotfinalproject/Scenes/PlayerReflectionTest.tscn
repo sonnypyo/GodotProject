@@ -52,6 +52,7 @@ size = Vector2(64, 2234.02)
 size = Vector2(3956, 30)
 
 [node name="PlayerReflectionTest" type="Node2D"]
+position = Vector2(239, 240)
 script = SubResource("GDScript_03q5j")
 
 [node name="TileMap" parent="." instance=ExtResource("2_nt2jd")]
