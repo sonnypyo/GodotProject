@@ -10,7 +10,7 @@ var heart_empty = preload("res://Images/hudHeart_empty.png")
 var heart_half = preload("res://Images/hudHeart_half.png")
 
 @export var mode : modes
-var PlayerHP: int = 6  # 플레이어 체력 초기값 설정
+var PlayerHP: int = 3  # 플레이어 체력 초기값 설정
 var is_dead_played: bool = false  # Dead 사운드 재생 여부 확인
 
 func _ready():

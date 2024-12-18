@@ -2,7 +2,7 @@ extends CharacterBody2D
 #손준표
 @onready var CloseEnemySprite2D = $CloseEnemySprit2D
 @onready var CloseRange = $Area2D
-@onready var CloseDead = $"../CloseDead"
+@onready var CloseDead = $"../../../BackGound/CloseDead"
 const TILE_SIZE = 60  # TileMap의 타일 크기
 
 class PathFindingNode:
@@ -110,7 +110,7 @@ func _process(delta):
 			CloseEnemySprite2D.play("Hit")
 			await get_tree().create_timer(1.0).timeout
 			CloseEnemySprite2D.play("Idel")
-			Globals.health_ui.decrease_health(1)
+			Globals.health_ui.decrease_health(0.5)
 			
 			print("Next node is target. Dealing damage.")
 			# 여기 공격겨겨격겨겨겨겨겨겨격겨겨격겨겨격겨겨격겨겨겨격겨겨겨격겨겨겨겨ㅕㄱ

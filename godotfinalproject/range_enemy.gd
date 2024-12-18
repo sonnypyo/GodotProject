@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var RangeIdel = $HitAniSprite
 
 @onready var rangerange = $Area2D
-@onready var RangeSound = $"../../RangedEnemy/RangeSound"
-@onready var RangeAttack = $"../RangeAttack"
+@onready var RangeSound = $"../../../BackGound/RangeSound"
+@onready var RangeAttack = $"../../../BackGound/RangeAttack"
 
 const TILE_SIZE = 60  # TileMap의 타일 크기
 
@@ -130,7 +130,7 @@ func _process(delta):
 		current_pos + Vector2i(1, 2) == target_pos or current_pos + Vector2i(0, 2) == target_pos or current_pos + Vector2i(-1, 2) == target_pos or 
 		current_pos + Vector2i(1, -2) == target_pos or current_pos + Vector2i(0, -2) == target_pos or current_pos + Vector2i(-1, -2) == target_pos ):
 			print("Next node is target. Dealing damagedddddddddddddd.")
-			Globals.health_ui.decrease_health(1)
+			Globals.health_ui.decrease_health(0.5)
 			RangeAttack.play()
 			RangeIdel.play("Hit")
 			await get_tree().create_timer(1.0).timeout

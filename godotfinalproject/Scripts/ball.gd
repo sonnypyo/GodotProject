@@ -119,7 +119,9 @@ func _on_body_entered(body: Node2D) -> void:
 			body.NecromDamage()
 		print("네크로 건드림")
 	elif body.name == "Boss":
-		print("보스 건드림")
+		if body.has_method("BossDamage"): # damage 메서드가 있는지 확인
+			body.BossDamage()
+
 
 
 func _on_body_exited(body: Node2D) -> void:

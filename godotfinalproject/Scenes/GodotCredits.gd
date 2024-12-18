@@ -31,37 +31,39 @@ var lines := []
 
 var credits = [
 	[
-		"A game by Awesome Game Company"
+		"CMP - GoDot - Final"
 	],[
 		"Programming",
-		"Programmer Name",
-		"Programmer Name 2"
+		"Programmer Son",
+		"Programmer Yoon",
+		"Programmer Kim",
+		"Programmer Chae"
+		
 	],[
 		"Art",
-		"Artist Name"
+		"Artist Chae",
+		"Artist Son"
+		
 	],[
 		"Music",
-		"Musician Name"
+		"Musician Son"
 	],[
 		"Sound Effects",
-		"SFX Name"
+		"SFX Son"
 	],[
 		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
+		"All!"
+		
 	],[
 		"Tools used",
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",
 		"",
 		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
+		"https://itch.io/game-assets/free/tag-2d"
 	],[
 		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
+		"My Profeccer"
 	]
 ]
 

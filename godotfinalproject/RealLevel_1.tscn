@@ -1,8 +1,9 @@
-[gd_scene load_steps=80 format=3 uid="uid://ciuiy57ppdy8k"]
+[gd_scene load_steps=142 format=3 uid="uid://ciuiy57ppdy8k"]
 
 [ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="1_8whfg"]
-[ext_resource type="Script" path="res://real_level_1.gd" id="1_jliqw"]
+[ext_resource type="Script" path="res://level_1_manger.gd" id="1_aa7ri"]
 [ext_resource type="AudioStream" uid="uid://blnbgrdvxklw8" path="res://Sounds/BackGound.mp3" id="1_ww7au"]
+[ext_resource type="Script" path="res://sound_manager.gd" id="2_0uhib"]
 [ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="2_abn4t"]
 [ext_resource type="PackedScene" uid="uid://cx7j43bhwb55q" path="res://Scenes/PlayerReflectionTest.tscn" id="3_fcqgm"]
 [ext_resource type="Script" path="res://Scenes/close_enemy.gd" id="4_5vosp"]
@@ -16,6 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://y5phbxiiwsrc" path="res://Images/TheRed.png" id="11_873vd"]
 [ext_resource type="AudioStream" uid="uid://sb2k0kxubuwo" path="res://Sounds/RangeAttack.wav" id="11_tbpkv"]
 [ext_resource type="AudioStream" uid="uid://rc5csanhfs2" path="res://Sounds/CloseDead.wav" id="12_4a7y0"]
+[ext_resource type="Script" path="res://necromancer.gd" id="18_fuy7q"]
+[ext_resource type="Texture2D" uid="uid://bq0j5g0h82uqb" path="res://Sprites/Necromancer_creativekind-Sheet.png" id="19_5i7p0"]
+[ext_resource type="PackedScene" uid="uid://xt1kd8q7851y" path="res://wall.tscn" id="20_rjr7p"]
+[ext_resource type="Script" path="res://boss.gd" id="21_sqf54"]
+[ext_resource type="Texture2D" uid="uid://sb6gh81elxwe" path="res://Sprites/Agis.png" id="22_x7in3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4iw6h"]
 size = Vector2(20, 56)
@@ -482,15 +488,437 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gxus"]
 size = Vector2(40, 40.817)
 
-[node name="Level_2" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xnm5"]
+size = Vector2(20, 42.1174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykfyf"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(0, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6xbn"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(160, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73d67"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(320, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71msf"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(480, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v8w3"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(640, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfo70"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(800, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmbyo"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(960, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7ktc"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1120, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbada"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1280, 768, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyy2g"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1440, 784, 160, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hpui"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1600, 784, 160, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2ej3"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(0, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkn0y"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(160, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsum8"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(320, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbn8"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(480, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yta5y"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(640, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wms21"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(800, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tq4qn"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(960, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdfe7"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1120, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj7hv"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(0, 640, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hui4"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(160, 640, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1iuxw"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(320, 640, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riuy5"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(480, 640, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65mpx"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(640, 640, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pvmp"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(0, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vba7g"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(160, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xftsn"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(320, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov0ti"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(480, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f00ym"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(640, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gy74"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(800, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cqs6"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(960, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06xp2"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1120, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13sh5"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1280, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smgfj"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1440, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cholu"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1600, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyf82"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1760, 256, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ueouk"]
+atlas = ExtResource("19_5i7p0")
+region = Rect2(1920, 256, 160, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_535aq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykfyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6xbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73d67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71msf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v8w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfo70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmbyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7ktc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbada")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyy2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hpui")
+}],
+"loop": false,
+"name": &"Dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2ej3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkn0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsum8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yta5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wms21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tq4qn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdfe7")
+}],
+"loop": true,
+"name": &"Idel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj7hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hui4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1iuxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riuy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65mpx")
+}],
+"loop": false,
+"name": &"Sick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pvmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vba7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xftsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov0ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f00ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gy74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cqs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06xp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13sh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smgfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cholu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyf82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ueouk")
+}],
+"loop": false,
+"name": &"Spwan",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6rpc"]
+size = Vector2(62.6808, 183.365)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oq56"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(0, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dba16"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(224, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ndyq"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(448, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uic0"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(672, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h75v8"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(896, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7thnn"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(1120, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3tbd"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(1344, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3exr5"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(1568, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r8jh"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(1792, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_son3b"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(2016, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yapyd"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(2240, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1hos"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(2464, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07uf5"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(2688, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkr1c"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(2912, 0, 224, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clii1"]
+atlas = ExtResource("22_x7in3")
+region = Rect2(3136, 0, 224, 240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tanwt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oq56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dba16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ndyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uic0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h75v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7thnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3tbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3exr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r8jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_son3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yapyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1hos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07uf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkr1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clii1")
+}],
+"loop": true,
+"name": &"Idel",
+"speed": 5.0
+}]
+
+[node name="Level_1" type="Node2D"]
 position = Vector2(240, 240)
-script = ExtResource("1_jliqw")
+script = ExtResource("1_aa7ri")
+
+[node name="Level1Manger" type="Node2D" parent="."]
+
+[node name="SoundManager" type="Node2D" parent="."]
+position = Vector2(-240, -240)
+script = ExtResource("2_0uhib")
 
 [node name="BackGound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_ww7au")
 autoplay = true
 bus = &"BGM"
 parameters/looping = false
+
+[node name="RangeAttack" type="AudioStreamPlayer2D" parent="BackGound"]
+position = Vector2(454, -11)
+scale = Vector2(1.29108, 1.29108)
+stream = ExtResource("11_tbpkv")
+
+[node name="RangeSound" type="AudioStreamPlayer2D" parent="BackGound"]
+position = Vector2(454, -11)
+scale = Vector2(1.29108, 1.29108)
+stream = ExtResource("10_emh3l")
+
+[node name="CloseDead" type="AudioStreamPlayer2D" parent="BackGound"]
+position = Vector2(227, 51)
+scale = Vector2(1.21707, 1.21707)
+stream = ExtResource("12_4a7y0")
 
 [node name="HeartsBar" parent="." instance=ExtResource("1_8whfg")]
 offset_left = -574.0
@@ -506,6 +934,309 @@ scale = Vector2(2.91223, 2.91223)
 texture = ExtResource("2_abn4t")
 
 [node name="PlayerReflectionTest" parent="." instance=ExtResource("3_fcqgm")]
+
+[node name="Enemys2" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 233)
+
+[node name="RangedEnemy" type="Node2D" parent="Enemys2"]
+position = Vector2(-208, -246)
+scale = Vector2(1.30143, 1.30143)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys2/RangedEnemy"]
+position = Vector2(-2.30516, 26.1251)
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/RangedEnemy/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0.289927, -5.76165)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(0.289927, -18.7617)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys2/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(1.28993, -21.7617)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys2/RangedEnemy/RangeEnemy"]
+position = Vector2(-1.24685, 0.448048)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys2/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy2" type="Node2D" parent="Enemys2"]
+position = Vector2(214, -251)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys2/RangedEnemy2"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/RangedEnemy2/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys2/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys2/RangedEnemy2/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys2/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy3" type="Node2D" parent="Enemys2"]
+position = Vector2(216, -433)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys2/RangedEnemy3"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/RangedEnemy3/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys2/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys2/RangedEnemy3/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys2/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy4" type="Node2D" parent="Enemys2"]
+position = Vector2(-83, -435)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys2/RangedEnemy4"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/RangedEnemy4/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy4/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys2/RangedEnemy4/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys2/RangedEnemy4/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys2/RangedEnemy4/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/RangedEnemy4/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy2" type="Node2D" parent="Enemys2"]
+position = Vector2(179, -236)
+scale = Vector2(1.10321, 1.10321)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys2/CloseEnemy2"]
+position = Vector2(-242.021, 76.1414)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys2/CloseEnemy2/CloseEnemy"]
+z_index = 1
+position = Vector2(-34.2413, -21.4834)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/CloseEnemy2/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-0.241257, 3.10807)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys2/CloseEnemy2/CloseEnemy"]
+position = Vector2(-0.702755, -1.54163)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/CloseEnemy2/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy3" type="Node2D" parent="Enemys2"]
+position = Vector2(-13, -189)
+scale = Vector2(1.21707, 1.21707)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys2/CloseEnemy3"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys2/CloseEnemy3/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/CloseEnemy3/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys2/CloseEnemy3/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/CloseEnemy3/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy4" type="Node2D" parent="Enemys2"]
+position = Vector2(-20, -365)
+scale = Vector2(1.21707, 1.21707)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys2/CloseEnemy4"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys2/CloseEnemy4/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/CloseEnemy4/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys2/CloseEnemy4/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/CloseEnemy4/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy5" type="Node2D" parent="Enemys2"]
+position = Vector2(-147, -367)
+scale = Vector2(1.48126, 1.48126)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys2/CloseEnemy5"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys2/CloseEnemy5/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys2/CloseEnemy5/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys2/CloseEnemy5/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys2/CloseEnemy5/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
 
 [node name="Enemys" type="Node2D" parent="."]
 
@@ -552,12 +1283,6 @@ position = Vector2(0, 11.0798)
 scale = Vector2(0.458319, 0.803025)
 texture = ExtResource("11_873vd")
 
-[node name="RangeSound" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy2"]
-stream = ExtResource("10_emh3l")
-
-[node name="RangeAttack" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy2"]
-stream = ExtResource("11_tbpkv")
-
 [node name="CloseEnemy3" type="Node2D" parent="Enemys"]
 position = Vector2(-13, -189)
 scale = Vector2(1.21707, 1.21707)
@@ -590,9 +1315,6 @@ position = Vector2(2.90457, 5.80913)
 scale = Vector2(0.5745, 0.57066)
 texture = ExtResource("11_873vd")
 
-[node name="CloseDead" type="AudioStreamPlayer2D" parent="Enemys/CloseEnemy3"]
-stream = ExtResource("12_4a7y0")
-
 [node name="CloseEnemy2" type="Node2D" parent="Enemys"]
 position = Vector2(179, -236)
 scale = Vector2(1.10321, 1.10321)
@@ -624,9 +1346,6 @@ modulate = Color(1, 1, 1, 0.639216)
 position = Vector2(2.90457, 5.80913)
 scale = Vector2(0.5745, 0.57066)
 texture = ExtResource("11_873vd")
-
-[node name="CloseDead" type="AudioStreamPlayer2D" parent="Enemys/CloseEnemy2"]
-stream = ExtResource("12_4a7y0")
 
 [node name="RangedEnemy" type="Node2D" parent="Enemys"]
 position = Vector2(-208, -246)
@@ -670,8 +1389,721 @@ position = Vector2(0, 11.0798)
 scale = Vector2(0.458319, 0.803025)
 texture = ExtResource("11_873vd")
 
-[node name="RangeSound" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy"]
-stream = ExtResource("10_emh3l")
+[node name="Enemys3" type="Node2D" parent="."]
+position = Vector2(0, 233)
 
-[node name="RangeAttack" type="AudioStreamPlayer2D" parent="Enemys/RangedEnemy"]
-stream = ExtResource("11_tbpkv")
+[node name="RangedEnemy2" type="Node2D" parent="Enemys3"]
+position = Vector2(214, -251)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys3/RangedEnemy2"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/RangedEnemy2/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys3/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys3/RangedEnemy2/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys3/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy3" type="Node2D" parent="Enemys3"]
+position = Vector2(-13, -189)
+scale = Vector2(1.21707, 1.21707)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys3/CloseEnemy3"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys3/CloseEnemy3/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/CloseEnemy3/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys3/CloseEnemy3/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/CloseEnemy3/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy2" type="Node2D" parent="Enemys3"]
+position = Vector2(179, -236)
+scale = Vector2(1.10321, 1.10321)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys3/CloseEnemy2"]
+position = Vector2(-242.021, 76.1414)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys3/CloseEnemy2/CloseEnemy"]
+z_index = 1
+position = Vector2(-34.2413, -21.4834)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/CloseEnemy2/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-0.241257, 3.10807)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys3/CloseEnemy2/CloseEnemy"]
+position = Vector2(-0.702755, -1.54163)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/CloseEnemy2/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy" type="Node2D" parent="Enemys3"]
+position = Vector2(-208, -246)
+scale = Vector2(1.30143, 1.30143)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys3/RangedEnemy"]
+position = Vector2(-2.30516, 26.1251)
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/RangedEnemy/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0.289927, -5.76165)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(0.289927, -18.7617)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys3/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(1.28993, -21.7617)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys3/RangedEnemy/RangeEnemy"]
+position = Vector2(-1.24685, 0.448048)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys3/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy3" type="Node2D" parent="Enemys3"]
+position = Vector2(216, -433)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys3/RangedEnemy3"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/RangedEnemy3/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys3/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys3/RangedEnemy3/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys3/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy4" type="Node2D" parent="Enemys3"]
+position = Vector2(-83, -435)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys3/RangedEnemy4"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/RangedEnemy4/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy4/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys3/RangedEnemy4/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys3/RangedEnemy4/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys3/RangedEnemy4/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/RangedEnemy4/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy4" type="Node2D" parent="Enemys3"]
+position = Vector2(-20, -365)
+scale = Vector2(1.21707, 1.21707)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys3/CloseEnemy4"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys3/CloseEnemy4/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/CloseEnemy4/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys3/CloseEnemy4/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/CloseEnemy4/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy5" type="Node2D" parent="Enemys3"]
+position = Vector2(-147, -367)
+scale = Vector2(1.48126, 1.48126)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys3/CloseEnemy5"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys3/CloseEnemy5/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/CloseEnemy5/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys3/CloseEnemy5/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys3/CloseEnemy5/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="Necromancer" type="Node2D" parent="Enemys3"]
+position = Vector2(-214, -153)
+scale = Vector2(1.93042, 1.93042)
+
+[node name="Necromancer" type="CharacterBody2D" parent="Enemys3/Necromancer"]
+position = Vector2(-2.07209, 30.0453)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("18_fuy7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/Necromancer/Necromancer"]
+position = Vector2(4.14417, -5.18022)
+shape = SubResource("RectangleShape2D_8xnm5")
+
+[node name="wall" parent="Enemys3/Necromancer/Necromancer" instance=ExtResource("20_rjr7p")]
+position = Vector2(4.6622, 19.6848)
+scale = Vector2(0.153075, 0.153075)
+
+[node name="NecromancerSprite2D" type="AnimatedSprite2D" parent="Enemys3/Necromancer"]
+position = Vector2(1.55407, -4.14418)
+sprite_frames = SubResource("SpriteFrames_535aq")
+animation = &"Dead"
+
+[node name="Necromancer2" type="Node2D" parent="Enemys3"]
+position = Vector2(213, -520)
+scale = Vector2(1.85311, 1.72318)
+
+[node name="Necromancer" type="CharacterBody2D" parent="Enemys3/Necromancer2"]
+position = Vector2(0.518038, 0)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("18_fuy7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys3/Necromancer2/Necromancer"]
+position = Vector2(-26.9601, 21.472)
+shape = SubResource("RectangleShape2D_8xnm5")
+
+[node name="wall" parent="Enemys3/Necromancer2/Necromancer" instance=ExtResource("20_rjr7p")]
+position = Vector2(0.0215931, 57.452)
+
+[node name="NecromancerSprite2D" type="AnimatedSprite2D" parent="Enemys3/Necromancer2"]
+position = Vector2(-28.6006, 1.16068)
+sprite_frames = SubResource("SpriteFrames_535aq")
+animation = &"Dead"
+
+[node name="Enemys4" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 233)
+
+[node name="Boss" type="Node2D" parent="Enemys4"]
+light_mask = 3
+visibility_layer = 3
+z_index = 1
+position = Vector2(0, -249)
+scale = Vector2(0.73119, 0.73119)
+
+[node name="Boss" type="CharacterBody2D" parent="Enemys4/Boss"]
+script = ExtResource("21_sqf54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/Boss/Boss"]
+position = Vector2(0.467795, 11.2264)
+shape = SubResource("RectangleShape2D_m6rpc")
+
+[node name="BossSprit2D" type="AnimatedSprite2D" parent="Enemys4/Boss"]
+sprite_frames = SubResource("SpriteFrames_tanwt")
+animation = &"Idel"
+
+[node name="Label" type="Label" parent="Enemys4/Boss"]
+offset_left = 346.011
+offset_top = -292.674
+offset_right = 386.011
+offset_bottom = -269.674
+scale = Vector2(3.93571, 2.29534)
+
+[node name="RangedEnemy2" type="Node2D" parent="Enemys4"]
+position = Vector2(214, -251)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys4/RangedEnemy2"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/RangedEnemy2/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys4/RangedEnemy2/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys4/RangedEnemy2/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys4/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy2/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy3" type="Node2D" parent="Enemys4"]
+position = Vector2(-13, -189)
+scale = Vector2(1.21707, 1.21707)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys4/CloseEnemy3"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys4/CloseEnemy3/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/CloseEnemy3/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys4/CloseEnemy3/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/CloseEnemy3/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy2" type="Node2D" parent="Enemys4"]
+position = Vector2(179, -236)
+scale = Vector2(1.10321, 1.10321)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys4/CloseEnemy2"]
+position = Vector2(-242.021, 76.1414)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys4/CloseEnemy2/CloseEnemy"]
+z_index = 1
+position = Vector2(-34.2413, -21.4834)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/CloseEnemy2/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-0.241257, 3.10807)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys4/CloseEnemy2/CloseEnemy"]
+position = Vector2(-0.702755, -1.54163)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/CloseEnemy2/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy" type="Node2D" parent="Enemys4"]
+position = Vector2(-208, -246)
+scale = Vector2(1.30143, 1.30143)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys4/RangedEnemy"]
+position = Vector2(-2.30516, 26.1251)
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/RangedEnemy/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0.289927, -5.76165)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(0.289927, -18.7617)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys4/RangedEnemy/RangeEnemy"]
+z_index = 1
+position = Vector2(1.28993, -21.7617)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys4/RangedEnemy/RangeEnemy"]
+position = Vector2(-1.24685, 0.448048)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys4/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy3" type="Node2D" parent="Enemys4"]
+position = Vector2(216, -433)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys4/RangedEnemy3"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/RangedEnemy3/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys4/RangedEnemy3/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys4/RangedEnemy3/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys4/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy3/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="RangedEnemy4" type="Node2D" parent="Enemys4"]
+position = Vector2(-83, -435)
+scale = Vector2(1.29108, 1.29108)
+
+[node name="RangeEnemy" type="CharacterBody2D" parent="Enemys4/RangedEnemy4"]
+position = Vector2(-48.7964, 27.8836)
+floor_block_on_wall = false
+script = ExtResource("6_mj4ho")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/RangedEnemy4/RangeEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.47635, -3.83998)
+shape = SubResource("RectangleShape2D_4iw6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy4/RangeEnemy"]
+z_index = 1
+position = Vector2(-1.47635, -16.84)
+
+[node name="HitAniSprite" type="AnimatedSprite2D" parent="Enemys4/RangedEnemy4/RangeEnemy"]
+z_index = 1
+position = Vector2(-0.476347, -19.84)
+sprite_frames = SubResource("SpriteFrames_184vv")
+animation = &"Dead"
+
+[node name="Area2D" type="Area2D" parent="Enemys4/RangedEnemy4/RangeEnemy"]
+position = Vector2(-3.79999, 6.39642)
+scale = Vector2(0.624152, 0.624152)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemys4/RangedEnemy4/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.46218, 14.7731)
+scale = Vector2(0.794104, 0.449399)
+texture = ExtResource("11_873vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/RangedEnemy4/RangeEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(0, 11.0798)
+scale = Vector2(0.458319, 0.803025)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy4" type="Node2D" parent="Enemys4"]
+position = Vector2(-20, -365)
+scale = Vector2(1.21707, 1.21707)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys4/CloseEnemy4"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys4/CloseEnemy4/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/CloseEnemy4/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys4/CloseEnemy4/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/CloseEnemy4/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="CloseEnemy5" type="Node2D" parent="Enemys4"]
+position = Vector2(-147, -367)
+scale = Vector2(1.48126, 1.48126)
+
+[node name="CloseEnemy" type="CharacterBody2D" parent="Enemys4/CloseEnemy5"]
+position = Vector2(36.974, 23.8277)
+script = ExtResource("4_5vosp")
+top_right = Vector2i(7, 7)
+WALL_LAYER = 1
+
+[node name="CloseEnemySprit2D" type="AnimatedSprite2D" parent="Enemys4/CloseEnemy5/CloseEnemy"]
+z_index = 1
+position = Vector2(-35.1706, -20.0533)
+sprite_frames = SubResource("SpriteFrames_r2mx3")
+animation = &"Sick"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/CloseEnemy5/CloseEnemy"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-1.17062, 4.53822)
+shape = SubResource("RectangleShape2D_7gxus")
+
+[node name="Area2D" type="Area2D" parent="Enemys4/CloseEnemy5/CloseEnemy"]
+position = Vector2(-3.94811, 2.13112)
+scale = Vector2(0.585177, 0.569828)
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemys4/CloseEnemy5/CloseEnemy/Area2D"]
+modulate = Color(1, 1, 1, 0.639216)
+position = Vector2(2.90457, 5.80913)
+scale = Vector2(0.5745, 0.57066)
+texture = ExtResource("11_873vd")
+
+[node name="Necromancer" type="Node2D" parent="Enemys4"]
+position = Vector2(-211, -97)
+scale = Vector2(1.93042, 1.93042)
+
+[node name="Necromancer" type="CharacterBody2D" parent="Enemys4/Necromancer"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("18_fuy7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/Necromancer/Necromancer"]
+position = Vector2(0.518015, 27.793)
+shape = SubResource("RectangleShape2D_8xnm5")
+
+[node name="wall" parent="Enemys4/Necromancer/Necromancer" instance=ExtResource("20_rjr7p")]
+position = Vector2(33.6714, 19.6849)
+scale = Vector2(0.153075, 0.153075)
+
+[node name="NecromancerSprite2D" type="AnimatedSprite2D" parent="Enemys4/Necromancer"]
+position = Vector2(-7.90439e-06, 0)
+sprite_frames = SubResource("SpriteFrames_535aq")
+animation = &"Dead"
+
+[node name="Necromancer2" type="Node2D" parent="Enemys4"]
+position = Vector2(213, -520)
+scale = Vector2(1.93042, 1.93042)
+
+[node name="Necromancer" type="CharacterBody2D" parent="Enemys4/Necromancer2"]
+position = Vector2(0.518038, 0)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("18_fuy7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemys4/Necromancer2/Necromancer"]
+position = Vector2(0.518015, 27.793)
+shape = SubResource("RectangleShape2D_8xnm5")
+
+[node name="wall" parent="Enemys4/Necromancer2/Necromancer" instance=ExtResource("20_rjr7p")]
+position = Vector2(-33.6714, 15.0226)
+
+[node name="NecromancerSprite2D" type="AnimatedSprite2D" parent="Enemys4/Necromancer2"]
+position = Vector2(-7.90439e-06, 0)
+sprite_frames = SubResource("SpriteFrames_535aq")
+animation = &"Dead"

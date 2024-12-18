@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://berdr4d1wsjr0" path="res://Images/Wall.png" id="1_h8xit"]
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_bc0mj"]
-length = 287.629
+length = 100.67
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_gvkam"]
-length = 287.629
+length = 263.66
 
 [node name="wall" type="Sprite2D"]
 position = Vector2(32, 21)
@@ -16,21 +16,29 @@ texture = ExtResource("1_h8xit")
 [node name="obstacle" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(134.227, -100.67)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(43.1444, -100.67)
 rotation = 1.5708
 shape = SubResource("SeparationRayShape2D_bc0mj")
 one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(134.227, 186.959)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(43.1444, 162.99)
 rotation = 1.5708
 shape = SubResource("SeparationRayShape2D_bc0mj")
 one_way_collision_margin = 0.0
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(134.227, -100.67)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(-52.732, -100.67)
 shape = SubResource("SeparationRayShape2D_gvkam")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="obstacle"]
-position = Vector2(-153.402, -100.67)
+light_mask = 3
+visibility_layer = 3
+position = Vector2(43.1444, -100.67)
 shape = SubResource("SeparationRayShape2D_gvkam")

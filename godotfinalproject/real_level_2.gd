@@ -8,6 +8,10 @@ func _ready():
 	enemy_list.append($Enemys/CloseEnemy3/CloseEnemy)
 	enemy_list.append($Enemys/CloseEnemy2/CloseEnemy)
 	enemy_list.append($Enemys/RangedEnemy/RangeEnemy)
+	enemy_list.append($Enemys/RangedEnemy3/RangeEnemy)
+	enemy_list.append($Enemys/RangedEnemy4/RangeEnemy)
+	enemy_list.append($Enemys/CloseEnemy4/CloseEnemy)
+	enemy_list.append($Enemys/CloseEnemy5/CloseEnemy)
 
 	print("Enemy list initialized: ", enemy_list.size(), " enemies")
 
@@ -23,4 +27,4 @@ func _process(delta):
 func go_to_next_stage():
 	# 다음 스테이지로 넘어가는 코드
 	print("Loading next stage...")
-	get_tree().change_scene_to_file("res://RealLevel_2.tscn")
+	get_tree().change_scene_to_file("res://RealRealLevel_2.tscn")

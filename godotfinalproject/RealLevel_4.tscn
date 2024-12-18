@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=3 uid="uid://blbd8d5p0vsdp"]
+[gd_scene load_steps=135 format=3 uid="uid://bjl0nan5xcjcv"]
 
 [ext_resource type="PackedScene" uid="uid://f73260dclatg" path="res://Scenes/HeartsBar.tscn" id="1_jmj1i"]
 [ext_resource type="Texture2D" uid="uid://dfovic1d1lsa" path="res://Images/dsf.jpg" id="2_orl8w"]

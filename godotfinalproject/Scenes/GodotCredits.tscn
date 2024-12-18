@@ -12,6 +12,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_478fc")
 
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 1
@@ -24,12 +30,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.879916, 0.498382)
 texture = ExtResource("2_eas0e")
-
-[node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-expand = true
 
 [node name="CreditsContainer" type="Control" parent="."]
 anchors_preset = 0
