@@ -92,12 +92,6 @@ Ref Video: -
 >- 벽을 세우는 네크로맨서
 >- Boss
 
-
-  
- <div align="center">
-    <img src="https://github.com/user-attachments/assets/5f2f950b-c6d0-4739-92b7-5e9be51a70c8" alt="image" width="900">
-</div>
-
 <br>
 
 ### 6. 추가 이미지
