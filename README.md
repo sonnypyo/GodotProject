@@ -23,8 +23,8 @@ Ref Video: -
 
 - **ACT Scene(JONGNO, FINAL) 프로젝트 클래스 다이어그램**
 <div align="center">
-<img src="
-<img width="650" alt="스크린샷 2025-01-16 오후 1 02 41" src="https://github.com/user-attachments/assets/9b3cfc43-771c-4cd7-abd6-35d080a20b24" />">
+<img src="https://github.com/user-attachments/assets/9b3cfc43-771c-4cd7-abd6-35d080a20b24"
+
 </div>
 
 <br>
