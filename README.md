@@ -23,7 +23,7 @@ Ref Video: -
 
 - **ACT Scene(JONGNO, FINAL) 프로젝트 클래스 다이어그램**
 <div align="center">
-<img src="https://github.com/user-attachments/assets/9b3cfc43-771c-4cd7-abd6-35d080a20b24"
+<img src="https://github.com/user-attachments/assets/9b3cfc43-771c-4cd7-abd6-35d080a20b24" alt="image">
 
 </div>
 
@@ -81,7 +81,7 @@ Ref Video: -
 > Main UI: 게임 main UI
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/02910175-c4eb-4c68-a344-a12098be5c3c" alt="image">
+<img src="https://github.com/user-attachments/assets/89aefdb2-5163-4417-87be-0a1d81625d15" alt="image">
 </div>
 
 <br>
@@ -89,7 +89,7 @@ Ref Video: -
 > 근거리 적 , 원거리 적 , 벽을 세우는 적 , BOSS로 구성
 
  <div align="center">
-    <img src="https://github.com/user-attachments/assets/bca97b6d-2be3-48c2-b1fe-e87f501f4029" alt="image" width="1000">
+    <img src="https://github.com/user-attachments/assets/0d251f5e-b182-4653-9e93-7ded87348a6e" width="1000">
 </div>
 
 <br>
