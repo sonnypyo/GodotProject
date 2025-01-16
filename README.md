@@ -11,6 +11,8 @@ Youtube: [Trailer Video](업데이트 예정)
 Ref Video: -
 <br>
 
+
+
 ### 1. 프로젝트 소개
 
 - GoDot Engine을 기반으로 제작된 색다른 Chess 게임 제작 프로젝트입니다.
@@ -23,7 +25,9 @@ Ref Video: -
 - 개발 도구: Godot Engine
 - 개발 언어: GD.Script
 
-
+<div align="center">
+<img src="https://github.com/user-attachments/assets/eedafea0-2748-4223-818c-5bb3b89693aa" alt="image">
+</div>
 
 </div>
 
@@ -62,10 +66,6 @@ Ref Video: -
 > 플레이어는 5번의 벽 팅김을 계산하고 플레이 진행
 > 4Stage로 진행
 
-
-<div align="center">
-<img src="https://github.com/user-attachments/assets/2b87f461-d9f4-4bfe-a527-0a04e526d15d" alt="image">
-</div>
 
 <br>
 
