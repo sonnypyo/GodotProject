@@ -150,5 +150,48 @@ Ref Video: -
 >
 >팀명: CMP A+ Team
 
-<br> <table align="center" width="900"> <thead> <tr> <th width="130" align="center">성명</th> <th width="270" align="center">소속</th> <th width="300" align="center">역할</th> <th width="100" align="center">깃허브</th> <th width="180" align="center">이메일</th> </tr> </thead> <tbody> <tr> <td width="130" align="center">손준표<br/>(팀장)</td> <td width="270" align="center">Ajou Univ - Digital Media</td> <td width="300">게임 메인 기획/개발/영상편집/사운드디자인 </br></td> <td width="100" align="center"> <a href="https://github.com/sonnypyo"> <img src="http://img.shields.io/badge/sonnypyo-655ced?style=social&logo=github"/> </a> </td> <td width="175" align="center"> <a href="mailto:jp1598@ajou.ac.kr"> <img src="https://img.shields.io/badge/jp1598-655ced?style=social&logo=gmail"/> </a> </td> </tr> <tr> <td width="130" align="center">윤지석</td> <td width="270" align="center">Ajou Univ - SoftWare </td> <td width="300">게임 개발/발표</br> </td> <td width="100" align="center"> <a href=" "> <img src="http://img.shields.io/badge/sonyrainy-655ced?style=social&logo=github"/> </a> </td> <td width="175" align="center"> <a href="mailto: "> <img src="https://img.shields.io/badge/thsguswls610-655ced?style=social&logo=gmail"/> </a> </td> </tr> <tr> <td width="130" align="center">채희준</td> <td width="270" align="center">Ajou Univ - Digital Media</td> <td width="300">UI/UX/문서</td> <td width="100" align="center">-</td> <td width="175" align="center"> <a href="mailto:"> <img src="https://img.shields.io/badge/jujae77-655ced?style=social&logo=gmail"/> </a> </td> </tr> </tbody> </table>
+<br>
+<table align="center" width="900">
+  <thead>
+    <tr>
+      <th width="130" align="center">성명</th>
+      <th width="270" align="center">소속</th>
+      <th width="300" align="center">역할</th>
+      <th width="100" align="center">깃허브</th>
+      <th width="180" align="center">이메일</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="130" align="center">손준표<br/>(팀장)</td>
+      <td width="270" align="center">Ajou Univ - Digital Media</td>
+      <td width="300">게임 메인 기획/개발/영상편집/사운드디자인 </br></td>
+      <td width="100" align="center">
+        <a href="https://github.com/sonnypyo">
+          <img src="http://img.shields.io/badge/sonnypyo-655ced?style=social&logo=github"/>
+        </a>
+      </td>
+      <td width="175" align="center">
+        <a href="mailto:jp1598@ajou.ac.kr">
+          <img src="https://img.shields.io/badge/jp1598-655ced?style=social&logo=gmail"/>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td width="130" align="center">윤지석</td>
+      <td width="270" align="center">-</td>
+      <td width="300">-</td>
+      <td width="100" align="center">-</td>
+      <td width="175" align="center">-</td>
+    </tr>
+    <tr>
+      <td width="130" align="center">채희준</td>
+      <td width="270" align="center">-</td>
+      <td width="300">-</td>
+      <td width="100" align="center">-</td>
+      <td width="175" align="center">-</td>
+    </tr>
+  </tbody>
+</table>
+
 
