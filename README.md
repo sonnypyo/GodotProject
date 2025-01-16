@@ -57,15 +57,6 @@ Ref Video: -
 >- 벽의 각도를 계산해서 클릭
 
 
-<br>
-
-<div align="center">
-<img src="https://github.com/user-attachments/assets/c8bbfd1a-1862-4c48-a2b9-c8ef4aecd6e2" alt="image">
-</div>
-
-
-<br>
-
 ### 5. 구현 내용
 - 게임 흐름
 > 미니 스토리 게임
@@ -114,29 +105,22 @@ Ref Video: -
 ### 6. 추가 이미지
 - In Game
 
-<div align="center">
-    <img src="https://github.com/user-attachments/assets/467e2782-d134-4a45-aebb-5b5528f854f2" alt="image" width="1000">
-</div>
-
-<div align="center">
-    <img src="https://github.com/user-attachments/assets/a7d2f540-0156-4e17-b5c5-4cb9060e14ab" alt="image" width="1000">
-</div>
-
-<div align="center">
-    <img src="https://github.com/user-attachments/assets/a2a3aca1-a577-4534-a139-8fc4535ad6f0" alt="image" width="700">
-</div>
-
-
-<br>
 
 - Sound Tool
 <div align="center">
     <img src="https://github.com/user-attachments/assets/97b3aba6-ab06-41e3-992f-08dd0d618eb3" alt="image" width="340">
 </div>
 
-- AI Tool
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/90c1088f-5465-4a29-b89b-168e78ebd2e6" alt="image" width="340">
+    <img src="https://github.com/user-attachments/assets/f0a4bf36-f69e-49dd-8f51-5784c544f6bf" alt="image" width="340">
+</div>
+
+- AI IMAGE
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/0a6a6ab3-1f2e-4594-b8dd-1b76835177d0" alt="image" width="340">
+</div>
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/8dc33a0f-4f48-46d7-bee3-381c5ea69647" alt="image" width="340">
 </div>
 
 
