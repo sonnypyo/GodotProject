@@ -23,9 +23,7 @@ Ref Video: -
 - 개발 도구: Godot Engine
 - 개발 언어: GD.Script
 
-- **ACT Scene(JONGNO, FINAL) 프로젝트 클래스 다이어그램**
-<div align="center">
-<img src="https://github.com/user-attachments/assets/9b3cfc43-771c-4cd7-abd6-35d080a20b24" alt="image">
+
 
 </div>
 
@@ -104,6 +102,7 @@ Ref Video: -
 
 ### 6. 추가 이미지
 - In Game
+---
 
 
 - Sound Tool
@@ -115,6 +114,7 @@ Ref Video: -
     <img src="https://github.com/user-attachments/assets/f0a4bf36-f69e-49dd-8f51-5784c544f6bf" alt="image" width="340">
 </div>
 
+---
 - AI IMAGE
 <div align="center">
     <img src="https://github.com/user-attachments/assets/0a6a6ab3-1f2e-4594-b8dd-1b76835177d0" alt="image" width="340">
