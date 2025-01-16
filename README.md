@@ -2,6 +2,8 @@
 
 → 채스의 틀을 깬 "Light Chess" 입니다.
 
+- 스토리 : 어둠에 잠식된 마을을 빛의 용사가 구하러 가는 어드벤쳐
+
 ---
 
 Youtube: [Trailer Video](업데이트 예정) 
@@ -81,12 +83,12 @@ Ref Video: -
 > Main UI: 게임 main UI
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/89aefdb2-5163-4417-87be-0a1d81625d15" alt="image">
+<img src="https://github.com/user-attachments/assets/c22fa515-58e3-4e50-8908-d60fc22013ad" alt="image">
 </div>
 
 <br>
 
-> 근거리 적 , 원거리 적 , 벽을 세우는 적 , BOSS로 구성
+> SpritAnim 사용
 
  <div align="center">
     <img src="https://github.com/user-attachments/assets/0d251f5e-b182-4653-9e93-7ded87348a6e" width="1000">
@@ -129,18 +131,12 @@ Ref Video: -
 
 - Sound Tool
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/90c1088f-5465-4a29-b89b-168e78ebd2e6" alt="image" width="340">
+    <img src="https://github.com/user-attachments/assets/97b3aba6-ab06-41e3-992f-08dd0d618eb3" alt="image" width="340">
 </div>
 
 - AI Tool
 <div align="center">
     <img src="https://github.com/user-attachments/assets/90c1088f-5465-4a29-b89b-168e78ebd2e6" alt="image" width="340">
-</div>
-
-
-- Game Poster
-<div align="center">
-    <img src="https://github.com/user-attachments/assets/645f4886-6342-4301-ab6b-c0c48f2337cb" alt="image" width="700">
 </div>
 
 
@@ -186,6 +182,13 @@ Ref Video: -
     </tr>
     <tr>
       <td width="130" align="center">채희준</td>
+      <td width="270" align="center">-</td>
+      <td width="300">-</td>
+      <td width="100" align="center">-</td>
+      <td width="175" align="center">-</td>
+    </tr>
+    <tr>
+     <td width="130" align="center">김민성</td>
       <td width="270" align="center">-</td>
       <td width="300">-</td>
       <td width="100" align="center">-</td>
