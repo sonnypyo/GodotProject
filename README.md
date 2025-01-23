@@ -161,7 +161,7 @@ Ref Video: -
     <tr>
             <td width="130" align="center">채희준</td>
       <td width="270" align="center">Ajou Univ - Digital Media</td>
-      <td width="300">개발/디자인/문서 정리</td>
+      <td width="300">개발/디자인/PPt/문서 정리</td>
       <td width="100" align="center">
         <a href="https://github.com/Jun001209">
           <img src="http://img.shields.io/badge/Jun001209-655ced?style=social&logo=github"/>
